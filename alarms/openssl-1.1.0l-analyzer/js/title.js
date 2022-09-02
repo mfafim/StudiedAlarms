@@ -1,0 +1,1 @@
+var data = {"report_desc": {"Project Name": "openssl", "First Analysis Time": "2021-08-13 23:04:29", "Latest Analysis Time": "2021-08-27 22:48:30", "Range": "Single Analysis", "Analysis Time": "2021-08-27 22:39:48", "Issue Reviews": "Todo, Suspicious, Confirmed"}, "page": "index", "total_pages": 11, "language": "en"}

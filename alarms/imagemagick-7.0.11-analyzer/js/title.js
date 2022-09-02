@@ -1,0 +1,1 @@
+var data = {"report_desc": {"Project Name": "imagemagick", "First Analysis Time": "2021-08-13 23:03:29", "Latest Analysis Time": "2021-08-18 01:32:43", "Range": "Single Analysis", "Analysis Time": "2021-08-18 01:21:54", "Issue Reviews": "Todo, Suspicious, Confirmed"}, "page": "index", "total_pages": 2, "language": "en"}

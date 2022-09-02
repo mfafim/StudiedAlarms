@@ -1,0 +1,4974 @@
+[
+    {
+        "runId": 19,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "95c50d5ca964260f1e56f2e8f3b2bc68",
+        "checkedFile": "libavformat/tee.c",
+        "checkerMsg": "pointer `null` is dereferenced by call to `av_interleaved_write_frame()` at line 553, column 19.",
+        "reportId": 166966,
+        "fileId": 3912,
+        "line": 553,
+        "column": 19,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 54,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 537,
+                    "startCol": 1,
+                    "endLine": 537,
+                    "endCol": 1,
+                    "msg": "start of procedure tee_write_packet()",
+                    "fileId": 3912,
+                    "filePath": "libavformat/tee.c"
+                },
+                {
+                    "startLine": 539,
+                    "startCol": 5,
+                    "endLine": 539,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3912,
+                    "filePath": "libavformat/tee.c"
+                },
+                {
+                    "startLine": 543,
+                    "startCol": 5,
+                    "endLine": 543,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3912,
+                    "filePath": "libavformat/tee.c"
+                },
+                {
+                    "startLine": 547,
+                    "startCol": 10,
+                    "endLine": 547,
+                    "endCol": 10,
+                    "msg": "",
+                    "fileId": 3912,
+                    "filePath": "libavformat/tee.c"
+                },
+                {
+                    "startLine": 547,
+                    "startCol": 17,
+                    "endLine": 547,
+                    "endCol": 17,
+                    "msg": "Loop condition is true. Entering loop body",
+                    "fileId": 3912,
+                    "filePath": "libavformat/tee.c"
+                },
+                {
+                    "startLine": 548,
+                    "startCol": 15,
+                    "endLine": 548,
+                    "endCol": 15,
+                    "msg": "Taking false branch",
+                    "fileId": 3912,
+                    "filePath": "libavformat/tee.c"
+                },
+                {
+                    "startLine": 552,
+                    "startCol": 14,
+                    "endLine": 552,
+                    "endCol": 14,
+                    "msg": "Taking true branch",
+                    "fileId": 3912,
+                    "filePath": "libavformat/tee.c"
+                },
+                {
+                    "startLine": 553,
+                    "startCol": 13,
+                    "endLine": 553,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 3912,
+                    "filePath": "libavformat/tee.c"
+                },
+                {
+                    "startLine": 1236,
+                    "startCol": 1,
+                    "endLine": 1236,
+                    "endCol": 1,
+                    "msg": "start of procedure av_interleaved_write_frame()",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1240,
+                    "startCol": 9,
+                    "endLine": 1240,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1241,
+                    "startCol": 9,
+                    "endLine": 1241,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1167,
+                    "startCol": 1,
+                    "endLine": 1167,
+                    "endCol": 1,
+                    "msg": "start of procedure write_packets_common()",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1170,
+                    "startCol": 5,
+                    "endLine": 1170,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 746,
+                    "startCol": 1,
+                    "endLine": 746,
+                    "endCol": 1,
+                    "msg": "start of procedure check_packet()",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 748,
+                    "startCol": 9,
+                    "endLine": 748,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 749,
+                    "startCol": 9,
+                    "endLine": 749,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 407,
+                    "startCol": 1,
+                    "endLine": 407,
+                    "endCol": 1,
+                    "msg": "start of procedure av_log()",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 410,
+                    "startCol": 5,
+                    "endLine": 410,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 411,
+                    "startCol": 5,
+                    "endLine": 411,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 424,
+                    "startCol": 1,
+                    "endLine": 424,
+                    "endCol": 1,
+                    "msg": "start of procedure av_vlog()",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 426,
+                    "startCol": 5,
+                    "endLine": 426,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 426,
+                    "startCol": 20,
+                    "endLine": 426,
+                    "endCol": 20,
+                    "msg": "Condition is false",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 427,
+                    "startCol": 5,
+                    "endLine": 427,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 428,
+                    "startCol": 9,
+                    "endLine": 428,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 431,
+                    "startCol": 9,
+                    "endLine": 431,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 431,
+                    "startCol": 5,
+                    "endLine": 431,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 433,
+                    "startCol": 1,
+                    "endLine": 433,
+                    "endCol": 1,
+                    "msg": "return from a call to av_vlog",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 412,
+                    "startCol": 5,
+                    "endLine": 412,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 413,
+                    "startCol": 1,
+                    "endLine": 413,
+                    "endCol": 1,
+                    "msg": "return from a call to av_log",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 751,
+                    "startCol": 9,
+                    "endLine": 751,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 760,
+                    "startCol": 1,
+                    "endLine": 760,
+                    "endCol": 1,
+                    "msg": "return from a call to check_packet",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1171,
+                    "startCol": 9,
+                    "endLine": 1171,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1172,
+                    "startCol": 9,
+                    "endLine": 1172,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1188,
+                    "startCol": 1,
+                    "endLine": 1188,
+                    "endCol": 1,
+                    "msg": "return from a call to write_packets_common",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1242,
+                    "startCol": 13,
+                    "endLine": 1242,
+                    "endCol": 13,
+                    "msg": "Taking true branch",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1243,
+                    "startCol": 13,
+                    "endLine": 1243,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 605,
+                    "startCol": 1,
+                    "endLine": 605,
+                    "endCol": 1,
+                    "msg": "start of procedure av_packet_unref()",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 607,
+                    "startCol": 5,
+                    "endLine": 607,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 273,
+                    "startCol": 1,
+                    "endLine": 273,
+                    "endCol": 1,
+                    "msg": "start of procedure av_packet_free_side_data()",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 276,
+                    "startCol": 10,
+                    "endLine": 276,
+                    "endCol": 10,
+                    "msg": "",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 276,
+                    "startCol": 17,
+                    "endLine": 276,
+                    "endCol": 17,
+                    "msg": "Loop condition is false. Leaving loop",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 278,
+                    "startCol": 5,
+                    "endLine": 278,
+                    "endCol": 5,
+                    "msg": "Skipping av_freep(): empty list of specs",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 279,
+                    "startCol": 5,
+                    "endLine": 279,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 280,
+                    "startCol": 1,
+                    "endLine": 280,
+                    "endCol": 1,
+                    "msg": "return from a call to av_packet_free_side_data",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 608,
+                    "startCol": 5,
+                    "endLine": 608,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 125,
+                    "startCol": 1,
+                    "endLine": 125,
+                    "endCol": 1,
+                    "msg": "start of procedure av_buffer_unref()",
+                    "fileId": 3916,
+                    "filePath": "libavutil/buffer.c"
+                },
+                {
+                    "startLine": 127,
+                    "startCol": 10,
+                    "endLine": 127,
+                    "endCol": 10,
+                    "msg": "Taking false branch",
+                    "fileId": 3916,
+                    "filePath": "libavutil/buffer.c"
+                },
+                {
+                    "startLine": 127,
+                    "startCol": 18,
+                    "endLine": 127,
+                    "endCol": 18,
+                    "msg": "Taking true branch",
+                    "fileId": 3916,
+                    "filePath": "libavutil/buffer.c"
+                },
+                {
+                    "startLine": 128,
+                    "startCol": 9,
+                    "endLine": 128,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3916,
+                    "filePath": "libavutil/buffer.c"
+                },
+                {
+                    "startLine": 131,
+                    "startCol": 1,
+                    "endLine": 131,
+                    "endCol": 1,
+                    "msg": "return from a call to av_buffer_unref",
+                    "fileId": 3916,
+                    "filePath": "libavutil/buffer.c"
+                },
+                {
+                    "startLine": 609,
+                    "startCol": 5,
+                    "endLine": 609,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 35,
+                    "startCol": 1,
+                    "endLine": 35,
+                    "endCol": 1,
+                    "msg": "start of procedure av_init_packet()",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 37,
+                    "startCol": 5,
+                    "endLine": 37,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 553,
+                    "startCol": 19,
+                    "endLine": 553,
+                    "endCol": 19,
+                    "msg": "pointer `null` is dereferenced by call to `av_interleaved_write_frame()` at line 553, column 19.",
+                    "fileId": 3912,
+                    "filePath": "libavformat/tee.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 537,
+                    "startCol": 1,
+                    "endLine": 537,
+                    "endCol": 1,
+                    "fileId": 3912,
+                    "filePath": "libavformat/tee.c"
+                },
+                {
+                    "startLine": 539,
+                    "startCol": 5,
+                    "endLine": 539,
+                    "endCol": 5,
+                    "fileId": 3912,
+                    "filePath": "libavformat/tee.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "f24adebc9567566c684dd058260959e1",
+        "checkedFile": "libavfilter/vf_xfade.c",
+        "checkerMsg": "pointer `pix_desc` last assigned on line 1342 could be null and is dereferenced at line 1374, column 16.",
+        "reportId": 166967,
+        "fileId": 3924,
+        "line": 1374,
+        "column": 16,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 23,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1336,
+                    "startCol": 1,
+                    "endLine": 1336,
+                    "endCol": 1,
+                    "msg": "start of procedure config_output()",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1338,
+                    "startCol": 5,
+                    "endLine": 1338,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1339,
+                    "startCol": 5,
+                    "endLine": 1339,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1340,
+                    "startCol": 5,
+                    "endLine": 1340,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1341,
+                    "startCol": 5,
+                    "endLine": 1341,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1342,
+                    "startCol": 5,
+                    "endLine": 1342,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 2549,
+                    "startCol": 1,
+                    "endLine": 2549,
+                    "endCol": 1,
+                    "msg": "start of procedure av_pix_fmt_desc_get()",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 2551,
+                    "startCol": 9,
+                    "endLine": 2551,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 2551,
+                    "startCol": 24,
+                    "endLine": 2551,
+                    "endCol": 24,
+                    "msg": "Taking true branch",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 2552,
+                    "startCol": 9,
+                    "endLine": 2552,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 2554,
+                    "startCol": 1,
+                    "endLine": 2554,
+                    "endCol": 1,
+                    "msg": "return from a call to av_pix_fmt_desc_get",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 1345,
+                    "startCol": 9,
+                    "endLine": 1345,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1349,
+                    "startCol": 9,
+                    "endLine": 1349,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1349,
+                    "startCol": 37,
+                    "endLine": 1349,
+                    "endCol": 37,
+                    "msg": "Taking false branch",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1358,
+                    "startCol": 9,
+                    "endLine": 1358,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1359,
+                    "startCol": 9,
+                    "endLine": 1359,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1368,
+                    "startCol": 5,
+                    "endLine": 1368,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1369,
+                    "startCol": 5,
+                    "endLine": 1369,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1370,
+                    "startCol": 5,
+                    "endLine": 1370,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1371,
+                    "startCol": 5,
+                    "endLine": 1371,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1372,
+                    "startCol": 5,
+                    "endLine": 1372,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1374,
+                    "startCol": 5,
+                    "endLine": 1374,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1374,
+                    "startCol": 16,
+                    "endLine": 1374,
+                    "endCol": 16,
+                    "msg": "pointer `pix_desc` last assigned on line 1342 could be null and is dereferenced at line 1374, column 16.",
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 1336,
+                    "startCol": 1,
+                    "endLine": 1336,
+                    "endCol": 1,
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                },
+                {
+                    "startLine": 1338,
+                    "startCol": 5,
+                    "endLine": 1338,
+                    "endCol": 5,
+                    "fileId": 3924,
+                    "filePath": "libavfilter/vf_xfade.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "a4d9f70afae62f8fbd42933cdc21df7c",
+        "checkedFile": "libavcodec/roqvideoenc.c",
+        "checkerMsg": "The value written to &block (type unsigned char*) is never used.",
+        "reportId": 166968,
+        "fileId": 3920,
+        "line": 760,
+        "column": 6,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 760,
+                    "startCol": 6,
+                    "endLine": 760,
+                    "endCol": 6,
+                    "msg": "Write of unused value",
+                    "fileId": 3920,
+                    "filePath": "libavcodec/roqvideoenc.c"
+                },
+                {
+                    "startLine": 760,
+                    "startCol": 6,
+                    "endLine": 760,
+                    "endCol": 6,
+                    "msg": "The value written to &block (type unsigned char*) is never used.",
+                    "fileId": 3920,
+                    "filePath": "libavcodec/roqvideoenc.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "f324f06685f8839419515c1c1740e593",
+        "checkedFile": "libavcodec/hevcdec.c",
+        "checkerMsg": "pointer `s->sList[i]` last assigned on line 2594 could be null and is dereferenced by call to `memcpy()` at line 2595, column 13.",
+        "reportId": 166969,
+        "fileId": 3905,
+        "line": 2595,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 23,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2564,
+                    "startCol": 1,
+                    "endLine": 2564,
+                    "endCol": 1,
+                    "msg": "start of procedure hls_slice_data_wpp()",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2566,
+                    "startCol": 5,
+                    "endLine": 2566,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2567,
+                    "startCol": 5,
+                    "endLine": 2567,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2568,
+                    "startCol": 5,
+                    "endLine": 2568,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2569,
+                    "startCol": 5,
+                    "endLine": 2569,
+                    "endCol": 5,
+                    "msg": "Skipping av_malloc_array(): empty list of specs",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2570,
+                    "startCol": 5,
+                    "endLine": 2570,
+                    "endCol": 5,
+                    "msg": "Skipping av_malloc_array(): empty list of specs",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2572,
+                    "startCol": 5,
+                    "endLine": 2572,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2573,
+                    "startCol": 5,
+                    "endLine": 2573,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2575,
+                    "startCol": 10,
+                    "endLine": 2575,
+                    "endCol": 10,
+                    "msg": "Taking false branch",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2575,
+                    "startCol": 18,
+                    "endLine": 2575,
+                    "endCol": 18,
+                    "msg": "Taking false branch",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2581,
+                    "startCol": 9,
+                    "endLine": 2581,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2590,
+                    "startCol": 5,
+                    "endLine": 2590,
+                    "endCol": 5,
+                    "msg": "Skipping ff_alloc_entries(): empty list of specs",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2592,
+                    "startCol": 10,
+                    "endLine": 2592,
+                    "endCol": 10,
+                    "msg": "Taking true branch",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2593,
+                    "startCol": 14,
+                    "endLine": 2593,
+                    "endCol": 14,
+                    "msg": "",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2593,
+                    "startCol": 21,
+                    "endLine": 2593,
+                    "endCol": 21,
+                    "msg": "Loop condition is true. Entering loop body",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2594,
+                    "startCol": 13,
+                    "endLine": 2594,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 77,
+                    "startCol": 1,
+                    "endLine": 77,
+                    "endCol": 1,
+                    "msg": "start of procedure av_malloc()",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 79,
+                    "startCol": 5,
+                    "endLine": 79,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 81,
+                    "startCol": 9,
+                    "endLine": 81,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 82,
+                    "startCol": 9,
+                    "endLine": 82,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 132,
+                    "startCol": 1,
+                    "endLine": 132,
+                    "endCol": 1,
+                    "msg": "return from a call to av_malloc",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 2595,
+                    "startCol": 13,
+                    "endLine": 2595,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2595,
+                    "startCol": 13,
+                    "endLine": 2595,
+                    "endCol": 13,
+                    "msg": "pointer `s->sList[i]` last assigned on line 2594 could be null and is dereferenced by call to `memcpy()` at line 2595, column 13.",
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 2564,
+                    "startCol": 1,
+                    "endLine": 2564,
+                    "endCol": 1,
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                },
+                {
+                    "startLine": 2566,
+                    "startCol": 5,
+                    "endLine": 2566,
+                    "endCol": 5,
+                    "fileId": 3905,
+                    "filePath": "libavcodec/hevcdec.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "c9ebf930617b6c0f6316495145ba9d83",
+        "checkedFile": "libavdevice/fbdev_dec.c",
+        "checkerMsg": "The value read from curtime was never initialized.",
+        "reportId": 166970,
+        "fileId": 3907,
+        "line": 189,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 189,
+                    "startCol": 5,
+                    "endLine": 189,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3907,
+                    "filePath": "libavdevice/fbdev_dec.c"
+                },
+                {
+                    "startLine": 189,
+                    "startCol": 5,
+                    "endLine": 189,
+                    "endCol": 5,
+                    "msg": "The value read from curtime was never initialized.",
+                    "fileId": 3907,
+                    "filePath": "libavdevice/fbdev_dec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "ad6df0b4bffe14d75c6ff4379beb9e94",
+        "checkedFile": "libavformat/mux.c",
+        "checkerMsg": "pointer `pktp` last assigned on line 1344 could be null and is dereferenced by call to `av_interleaved_write_frame()` at line 1372, column 26.",
+        "reportId": 166971,
+        "fileId": 3913,
+        "line": 1372,
+        "column": 26,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 53,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1332,
+                    "startCol": 1,
+                    "endLine": 1332,
+                    "endCol": 1,
+                    "msg": "start of procedure write_uncoded_frame_internal()",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1337,
+                    "startCol": 5,
+                    "endLine": 1337,
+                    "endCol": 5,
+                    "msg": "Taking false branch",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1337,
+                    "startCol": 5,
+                    "endLine": 1337,
+                    "endCol": 5,
+                    "msg": "Loop condition is false. Leaving loop",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1338,
+                    "startCol": 10,
+                    "endLine": 1338,
+                    "endCol": 10,
+                    "msg": "Taking false branch",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1343,
+                    "startCol": 10,
+                    "endLine": 1343,
+                    "endCol": 10,
+                    "msg": "Taking true branch",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1344,
+                    "startCol": 9,
+                    "endLine": 1344,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1372,
+                    "startCol": 12,
+                    "endLine": 1372,
+                    "endCol": 12,
+                    "msg": "Condition is true",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1236,
+                    "startCol": 1,
+                    "endLine": 1236,
+                    "endCol": 1,
+                    "msg": "start of procedure av_interleaved_write_frame()",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1240,
+                    "startCol": 9,
+                    "endLine": 1240,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1241,
+                    "startCol": 9,
+                    "endLine": 1241,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1167,
+                    "startCol": 1,
+                    "endLine": 1167,
+                    "endCol": 1,
+                    "msg": "start of procedure write_packets_common()",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1170,
+                    "startCol": 5,
+                    "endLine": 1170,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 746,
+                    "startCol": 1,
+                    "endLine": 746,
+                    "endCol": 1,
+                    "msg": "start of procedure check_packet()",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 748,
+                    "startCol": 9,
+                    "endLine": 748,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 749,
+                    "startCol": 9,
+                    "endLine": 749,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 407,
+                    "startCol": 1,
+                    "endLine": 407,
+                    "endCol": 1,
+                    "msg": "start of procedure av_log()",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 410,
+                    "startCol": 5,
+                    "endLine": 410,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 411,
+                    "startCol": 5,
+                    "endLine": 411,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 424,
+                    "startCol": 1,
+                    "endLine": 424,
+                    "endCol": 1,
+                    "msg": "start of procedure av_vlog()",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 426,
+                    "startCol": 5,
+                    "endLine": 426,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 426,
+                    "startCol": 20,
+                    "endLine": 426,
+                    "endCol": 20,
+                    "msg": "Condition is false",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 427,
+                    "startCol": 5,
+                    "endLine": 427,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 428,
+                    "startCol": 9,
+                    "endLine": 428,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 431,
+                    "startCol": 9,
+                    "endLine": 431,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 431,
+                    "startCol": 5,
+                    "endLine": 431,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 433,
+                    "startCol": 1,
+                    "endLine": 433,
+                    "endCol": 1,
+                    "msg": "return from a call to av_vlog",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 412,
+                    "startCol": 5,
+                    "endLine": 412,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 413,
+                    "startCol": 1,
+                    "endLine": 413,
+                    "endCol": 1,
+                    "msg": "return from a call to av_log",
+                    "fileId": 3914,
+                    "filePath": "libavutil/log.c"
+                },
+                {
+                    "startLine": 751,
+                    "startCol": 9,
+                    "endLine": 751,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 760,
+                    "startCol": 1,
+                    "endLine": 760,
+                    "endCol": 1,
+                    "msg": "return from a call to check_packet",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1171,
+                    "startCol": 9,
+                    "endLine": 1171,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1172,
+                    "startCol": 9,
+                    "endLine": 1172,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1188,
+                    "startCol": 1,
+                    "endLine": 1188,
+                    "endCol": 1,
+                    "msg": "return from a call to write_packets_common",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1242,
+                    "startCol": 13,
+                    "endLine": 1242,
+                    "endCol": 13,
+                    "msg": "Taking true branch",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1243,
+                    "startCol": 13,
+                    "endLine": 1243,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 605,
+                    "startCol": 1,
+                    "endLine": 605,
+                    "endCol": 1,
+                    "msg": "start of procedure av_packet_unref()",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 607,
+                    "startCol": 5,
+                    "endLine": 607,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 273,
+                    "startCol": 1,
+                    "endLine": 273,
+                    "endCol": 1,
+                    "msg": "start of procedure av_packet_free_side_data()",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 276,
+                    "startCol": 10,
+                    "endLine": 276,
+                    "endCol": 10,
+                    "msg": "",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 276,
+                    "startCol": 17,
+                    "endLine": 276,
+                    "endCol": 17,
+                    "msg": "Loop condition is false. Leaving loop",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 278,
+                    "startCol": 5,
+                    "endLine": 278,
+                    "endCol": 5,
+                    "msg": "Skipping av_freep(): empty list of specs",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 279,
+                    "startCol": 5,
+                    "endLine": 279,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 280,
+                    "startCol": 1,
+                    "endLine": 280,
+                    "endCol": 1,
+                    "msg": "return from a call to av_packet_free_side_data",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 608,
+                    "startCol": 5,
+                    "endLine": 608,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 125,
+                    "startCol": 1,
+                    "endLine": 125,
+                    "endCol": 1,
+                    "msg": "start of procedure av_buffer_unref()",
+                    "fileId": 3916,
+                    "filePath": "libavutil/buffer.c"
+                },
+                {
+                    "startLine": 127,
+                    "startCol": 10,
+                    "endLine": 127,
+                    "endCol": 10,
+                    "msg": "Taking false branch",
+                    "fileId": 3916,
+                    "filePath": "libavutil/buffer.c"
+                },
+                {
+                    "startLine": 127,
+                    "startCol": 18,
+                    "endLine": 127,
+                    "endCol": 18,
+                    "msg": "Taking true branch",
+                    "fileId": 3916,
+                    "filePath": "libavutil/buffer.c"
+                },
+                {
+                    "startLine": 128,
+                    "startCol": 9,
+                    "endLine": 128,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3916,
+                    "filePath": "libavutil/buffer.c"
+                },
+                {
+                    "startLine": 131,
+                    "startCol": 1,
+                    "endLine": 131,
+                    "endCol": 1,
+                    "msg": "return from a call to av_buffer_unref",
+                    "fileId": 3916,
+                    "filePath": "libavutil/buffer.c"
+                },
+                {
+                    "startLine": 609,
+                    "startCol": 5,
+                    "endLine": 609,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 35,
+                    "startCol": 1,
+                    "endLine": 35,
+                    "endCol": 1,
+                    "msg": "start of procedure av_init_packet()",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 37,
+                    "startCol": 5,
+                    "endLine": 37,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3915,
+                    "filePath": "libavcodec/avpacket.c"
+                },
+                {
+                    "startLine": 1372,
+                    "startCol": 26,
+                    "endLine": 1372,
+                    "endCol": 26,
+                    "msg": "pointer `pktp` last assigned on line 1344 could be null and is dereferenced by call to `av_interleaved_write_frame()` at line 1372, column 26.",
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 1332,
+                    "startCol": 1,
+                    "endLine": 1332,
+                    "endCol": 1,
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                },
+                {
+                    "startLine": 1337,
+                    "startCol": 5,
+                    "endLine": 1337,
+                    "endCol": 5,
+                    "fileId": 3913,
+                    "filePath": "libavformat/mux.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "ac81a347c07f458890c8160b23316edf",
+        "checkedFile": "libavcodec/mpegvideo.c",
+        "checkerMsg": "pointer `s->mb_index2xy` last assigned on line 718 could be null and is dereferenced at line 724, column 5.",
+        "reportId": 166972,
+        "fileId": 3911,
+        "line": 724,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 33,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 687,
+                    "startCol": 1,
+                    "endLine": 687,
+                    "endCol": 1,
+                    "msg": "start of procedure init_context_frame()",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 691,
+                    "startCol": 5,
+                    "endLine": 691,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 692,
+                    "startCol": 5,
+                    "endLine": 692,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 693,
+                    "startCol": 5,
+                    "endLine": 693,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 694,
+                    "startCol": 5,
+                    "endLine": 694,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 695,
+                    "startCol": 5,
+                    "endLine": 695,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 699,
+                    "startCol": 5,
+                    "endLine": 699,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 700,
+                    "startCol": 5,
+                    "endLine": 700,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 702,
+                    "startCol": 5,
+                    "endLine": 702,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 704,
+                    "startCol": 5,
+                    "endLine": 704,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 708,
+                    "startCol": 5,
+                    "endLine": 708,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 711,
+                    "startCol": 5,
+                    "endLine": 711,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 712,
+                    "startCol": 5,
+                    "endLine": 712,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 713,
+                    "startCol": 5,
+                    "endLine": 713,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 715,
+                    "startCol": 9,
+                    "endLine": 715,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 716,
+                    "startCol": 9,
+                    "endLine": 716,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 718,
+                    "startCol": 5,
+                    "endLine": 718,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 237,
+                    "startCol": 1,
+                    "endLine": 237,
+                    "endCol": 1,
+                    "msg": "start of procedure av_mallocz()",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 239,
+                    "startCol": 5,
+                    "endLine": 239,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 77,
+                    "startCol": 1,
+                    "endLine": 77,
+                    "endCol": 1,
+                    "msg": "start of procedure av_malloc()",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 79,
+                    "startCol": 5,
+                    "endLine": 79,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 81,
+                    "startCol": 9,
+                    "endLine": 81,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 82,
+                    "startCol": 9,
+                    "endLine": 82,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 132,
+                    "startCol": 1,
+                    "endLine": 132,
+                    "endCol": 1,
+                    "msg": "return from a call to av_malloc",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 240,
+                    "startCol": 9,
+                    "endLine": 240,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 242,
+                    "startCol": 5,
+                    "endLine": 242,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 243,
+                    "startCol": 1,
+                    "endLine": 243,
+                    "endCol": 1,
+                    "msg": "return from a call to av_mallocz",
+                    "fileId": 3906,
+                    "filePath": "libavutil/mem.c"
+                },
+                {
+                    "startLine": 718,
+                    "startCol": 5,
+                    "endLine": 718,
+                    "endCol": 5,
+                    "msg": "Taking true branch",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 718,
+                    "startCol": 5,
+                    "endLine": 718,
+                    "endCol": 5,
+                    "msg": "Taking false branch",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 720,
+                    "startCol": 10,
+                    "endLine": 720,
+                    "endCol": 10,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 720,
+                    "startCol": 17,
+                    "endLine": 720,
+                    "endCol": 17,
+                    "msg": "Loop condition is false. Leaving loop",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 724,
+                    "startCol": 5,
+                    "endLine": 724,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 724,
+                    "startCol": 5,
+                    "endLine": 724,
+                    "endCol": 5,
+                    "msg": "pointer `s->mb_index2xy` last assigned on line 718 could be null and is dereferenced at line 724, column 5.",
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 687,
+                    "startCol": 1,
+                    "endLine": 687,
+                    "endCol": 1,
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                },
+                {
+                    "startLine": 691,
+                    "startCol": 5,
+                    "endLine": 691,
+                    "endCol": 5,
+                    "fileId": 3911,
+                    "filePath": "libavcodec/mpegvideo.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "72f9dfba17d387fde44b16aeeacc233c",
+        "checkedFile": "libavfilter/vf_lenscorrection.c",
+        "checkerMsg": "pointer `pixdesc` last assigned on line 131 could be null and is dereferenced at line 132, column 18.",
+        "reportId": 166973,
+        "fileId": 3901,
+        "line": 132,
+        "column": 18,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 12,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 126,
+                    "startCol": 1,
+                    "endLine": 126,
+                    "endCol": 1,
+                    "msg": "start of procedure config_props()",
+                    "fileId": 3901,
+                    "filePath": "libavfilter/vf_lenscorrection.c"
+                },
+                {
+                    "startLine": 128,
+                    "startCol": 5,
+                    "endLine": 128,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3901,
+                    "filePath": "libavfilter/vf_lenscorrection.c"
+                },
+                {
+                    "startLine": 129,
+                    "startCol": 5,
+                    "endLine": 129,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3901,
+                    "filePath": "libavfilter/vf_lenscorrection.c"
+                },
+                {
+                    "startLine": 130,
+                    "startCol": 5,
+                    "endLine": 130,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3901,
+                    "filePath": "libavfilter/vf_lenscorrection.c"
+                },
+                {
+                    "startLine": 131,
+                    "startCol": 5,
+                    "endLine": 131,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3901,
+                    "filePath": "libavfilter/vf_lenscorrection.c"
+                },
+                {
+                    "startLine": 2549,
+                    "startCol": 1,
+                    "endLine": 2549,
+                    "endCol": 1,
+                    "msg": "start of procedure av_pix_fmt_desc_get()",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 2551,
+                    "startCol": 9,
+                    "endLine": 2551,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 2551,
+                    "startCol": 24,
+                    "endLine": 2551,
+                    "endCol": 24,
+                    "msg": "Taking true branch",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 2552,
+                    "startCol": 9,
+                    "endLine": 2552,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 2554,
+                    "startCol": 1,
+                    "endLine": 2554,
+                    "endCol": 1,
+                    "msg": "return from a call to av_pix_fmt_desc_get",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 132,
+                    "startCol": 5,
+                    "endLine": 132,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3901,
+                    "filePath": "libavfilter/vf_lenscorrection.c"
+                },
+                {
+                    "startLine": 132,
+                    "startCol": 18,
+                    "endLine": 132,
+                    "endCol": 18,
+                    "msg": "pointer `pixdesc` last assigned on line 131 could be null and is dereferenced at line 132, column 18.",
+                    "fileId": 3901,
+                    "filePath": "libavfilter/vf_lenscorrection.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 126,
+                    "startCol": 1,
+                    "endLine": 126,
+                    "endCol": 1,
+                    "fileId": 3901,
+                    "filePath": "libavfilter/vf_lenscorrection.c"
+                },
+                {
+                    "startLine": 128,
+                    "startCol": 5,
+                    "endLine": 128,
+                    "endCol": 5,
+                    "fileId": 3901,
+                    "filePath": "libavfilter/vf_lenscorrection.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "9b35e112564fbcd92a608d14869e6e26",
+        "checkedFile": "libavfilter/af_asubboost.c",
+        "checkerMsg": "The value read from write_pos was never initialized.",
+        "reportId": 166974,
+        "fileId": 3900,
+        "line": 160,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 160,
+                    "startCol": 5,
+                    "endLine": 160,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3900,
+                    "filePath": "libavfilter/af_asubboost.c"
+                },
+                {
+                    "startLine": 160,
+                    "startCol": 5,
+                    "endLine": 160,
+                    "endCol": 5,
+                    "msg": "The value read from write_pos was never initialized.",
+                    "fileId": 3900,
+                    "filePath": "libavfilter/af_asubboost.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "3216b0df5d6fa3bda825ccb2afe35f0b",
+        "checkedFile": "libavformat/cdg.c",
+        "checkerMsg": "The value read from ret was never initialized.",
+        "reportId": 166975,
+        "fileId": 3922,
+        "line": 81,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 81,
+                    "startCol": 5,
+                    "endLine": 81,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3922,
+                    "filePath": "libavformat/cdg.c"
+                },
+                {
+                    "startLine": 81,
+                    "startCol": 5,
+                    "endLine": 81,
+                    "endCol": 5,
+                    "msg": "The value read from ret was never initialized.",
+                    "fileId": 3922,
+                    "filePath": "libavformat/cdg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "b07a69257f32f3055793031760da5c31",
+        "checkedFile": "libavformat/cdg.c",
+        "checkerMsg": "The value read from ret was never initialized.",
+        "reportId": 166976,
+        "fileId": 3922,
+        "line": 78,
+        "column": 8,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 78,
+                    "startCol": 8,
+                    "endLine": 78,
+                    "endCol": 8,
+                    "msg": "",
+                    "fileId": 3922,
+                    "filePath": "libavformat/cdg.c"
+                },
+                {
+                    "startLine": 78,
+                    "startCol": 8,
+                    "endLine": 78,
+                    "endCol": 8,
+                    "msg": "The value read from ret was never initialized.",
+                    "fileId": 3922,
+                    "filePath": "libavformat/cdg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "95427efb15392f5553265ea77a100c98",
+        "checkedFile": "libavformat/mpegts.c",
+        "checkerMsg": "The value read from packet_count[_] was never initialized.",
+        "reportId": 166977,
+        "fileId": 3903,
+        "line": 3137,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 3137,
+                    "startCol": 9,
+                    "endLine": 3137,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3903,
+                    "filePath": "libavformat/mpegts.c"
+                },
+                {
+                    "startLine": 3137,
+                    "startCol": 9,
+                    "endLine": 3137,
+                    "endCol": 9,
+                    "msg": "The value read from packet_count[_] was never initialized.",
+                    "fileId": 3903,
+                    "filePath": "libavformat/mpegts.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "534fc0d16b418e15730d59ed27057e49",
+        "checkedFile": "libavformat/mpegts.c",
+        "checkerMsg": "The value read from packet_count[_] was never initialized.",
+        "reportId": 166978,
+        "fileId": 3903,
+        "line": 3136,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 3136,
+                    "startCol": 9,
+                    "endLine": 3136,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3903,
+                    "filePath": "libavformat/mpegts.c"
+                },
+                {
+                    "startLine": 3136,
+                    "startCol": 9,
+                    "endLine": 3136,
+                    "endCol": 9,
+                    "msg": "The value read from packet_count[_] was never initialized.",
+                    "fileId": 3903,
+                    "filePath": "libavformat/mpegts.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "21047daf211546be0e1029c3d747d221",
+        "checkedFile": "libavcodec/pngdec.c",
+        "checkerMsg": "The value read from g was never initialized.",
+        "reportId": 166979,
+        "fileId": 3909,
+        "line": 286,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 286,
+                    "startCol": 9,
+                    "endLine": 286,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3909,
+                    "filePath": "libavcodec/pngdec.c"
+                },
+                {
+                    "startLine": 286,
+                    "startCol": 9,
+                    "endLine": 286,
+                    "endCol": 9,
+                    "msg": "The value read from g was never initialized.",
+                    "fileId": 3909,
+                    "filePath": "libavcodec/pngdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "a13c33d2e0d88c8df7a6ee9dbecd3bdd",
+        "checkedFile": "libavcodec/pngdec.c",
+        "checkerMsg": "The value read from a was never initialized.",
+        "reportId": 166980,
+        "fileId": 3909,
+        "line": 286,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 286,
+                    "startCol": 9,
+                    "endLine": 286,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3909,
+                    "filePath": "libavcodec/pngdec.c"
+                },
+                {
+                    "startLine": 286,
+                    "startCol": 9,
+                    "endLine": 286,
+                    "endCol": 9,
+                    "msg": "The value read from a was never initialized.",
+                    "fileId": 3909,
+                    "filePath": "libavcodec/pngdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "32c17c08071c571f9146753e382cc01d",
+        "checkedFile": "libavcodec/pngdec.c",
+        "checkerMsg": "The value read from b was never initialized.",
+        "reportId": 166981,
+        "fileId": 3909,
+        "line": 286,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 286,
+                    "startCol": 9,
+                    "endLine": 286,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3909,
+                    "filePath": "libavcodec/pngdec.c"
+                },
+                {
+                    "startLine": 286,
+                    "startCol": 9,
+                    "endLine": 286,
+                    "endCol": 9,
+                    "msg": "The value read from b was never initialized.",
+                    "fileId": 3909,
+                    "filePath": "libavcodec/pngdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "12acc894d214d75fd4b76bc3ffe81ac7",
+        "checkedFile": "libavcodec/pngdec.c",
+        "checkerMsg": "The value read from g was never initialized.",
+        "reportId": 166982,
+        "fileId": 3909,
+        "line": 274,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 274,
+                    "startCol": 13,
+                    "endLine": 274,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 3909,
+                    "filePath": "libavcodec/pngdec.c"
+                },
+                {
+                    "startLine": 274,
+                    "startCol": 13,
+                    "endLine": 274,
+                    "endCol": 13,
+                    "msg": "The value read from g was never initialized.",
+                    "fileId": 3909,
+                    "filePath": "libavcodec/pngdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "acf306b9b6ec49f2301044153fba3ce9",
+        "checkedFile": "libavcodec/pngdec.c",
+        "checkerMsg": "The value read from a was never initialized.",
+        "reportId": 166983,
+        "fileId": 3909,
+        "line": 274,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 274,
+                    "startCol": 13,
+                    "endLine": 274,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 3909,
+                    "filePath": "libavcodec/pngdec.c"
+                },
+                {
+                    "startLine": 274,
+                    "startCol": 13,
+                    "endLine": 274,
+                    "endCol": 13,
+                    "msg": "The value read from a was never initialized.",
+                    "fileId": 3909,
+                    "filePath": "libavcodec/pngdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "b94a91cc0535f6f36f391fae9f34899c",
+        "checkedFile": "libavcodec/pngdec.c",
+        "checkerMsg": "The value read from b was never initialized.",
+        "reportId": 166984,
+        "fileId": 3909,
+        "line": 274,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 274,
+                    "startCol": 13,
+                    "endLine": 274,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 3909,
+                    "filePath": "libavcodec/pngdec.c"
+                },
+                {
+                    "startLine": 274,
+                    "startCol": 13,
+                    "endLine": 274,
+                    "endCol": 13,
+                    "msg": "The value read from b was never initialized.",
+                    "fileId": 3909,
+                    "filePath": "libavcodec/pngdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "bbf13dab5b226556d3b822d3f410e2bd",
+        "checkedFile": "libavformat/utils.c",
+        "checkerMsg": "The value read from out_pkt.flags was never initialized.",
+        "reportId": 166985,
+        "fileId": 3926,
+        "line": 1518,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1518,
+                    "startCol": 9,
+                    "endLine": 1518,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3926,
+                    "filePath": "libavformat/utils.c"
+                },
+                {
+                    "startLine": 1518,
+                    "startCol": 9,
+                    "endLine": 1518,
+                    "endCol": 9,
+                    "msg": "The value read from out_pkt.flags was never initialized.",
+                    "fileId": 3926,
+                    "filePath": "libavformat/utils.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "374c2587ba01d8d9f6de2d968620abd3",
+        "checkedFile": "libavfilter/dnn/dnn_backend_native_layer_mathbinary.c",
+        "checkerMsg": "The value written to &input_index (type int) is never used.",
+        "reportId": 166986,
+        "fileId": 3928,
+        "line": 64,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 64,
+                    "startCol": 9,
+                    "endLine": 64,
+                    "endCol": 9,
+                    "msg": "Write of unused value",
+                    "fileId": 3928,
+                    "filePath": "libavfilter/dnn/dnn_backend_native_layer_mathbinary.c"
+                },
+                {
+                    "startLine": 64,
+                    "startCol": 9,
+                    "endLine": 64,
+                    "endCol": 9,
+                    "msg": "The value written to &input_index (type int) is never used.",
+                    "fileId": 3928,
+                    "filePath": "libavfilter/dnn/dnn_backend_native_layer_mathbinary.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "a4cf494f87c41e41b8e76828a1c9ba17",
+        "checkedFile": "libavcodec/dvbsub.c",
+        "checkerMsg": "The value written to &buf_size (type int) is never used.",
+        "reportId": 166987,
+        "fileId": 3899,
+        "line": 506,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 506,
+                    "startCol": 5,
+                    "endLine": 506,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 3899,
+                    "filePath": "libavcodec/dvbsub.c"
+                },
+                {
+                    "startLine": 506,
+                    "startCol": 5,
+                    "endLine": 506,
+                    "endCol": 5,
+                    "msg": "The value written to &buf_size (type int) is never used.",
+                    "fileId": 3899,
+                    "filePath": "libavcodec/dvbsub.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "82f60e0974c5079dbe193809c6ea67df",
+        "checkedFile": "libavformat/sccdec.c",
+        "checkerMsg": "The value read from ts_end was never initialized.",
+        "reportId": 166988,
+        "fileId": 3917,
+        "line": 151,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 151,
+                    "startCol": 9,
+                    "endLine": 151,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3917,
+                    "filePath": "libavformat/sccdec.c"
+                },
+                {
+                    "startLine": 151,
+                    "startCol": 9,
+                    "endLine": 151,
+                    "endCol": 9,
+                    "msg": "The value read from ts_end was never initialized.",
+                    "fileId": 3917,
+                    "filePath": "libavformat/sccdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "b481c7dda39eb7c62b8aad6bfdf855d5",
+        "checkedFile": "libavformat/sccdec.c",
+        "checkerMsg": "The value read from ts_end was never initialized.",
+        "reportId": 166989,
+        "fileId": 3917,
+        "line": 150,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 150,
+                    "startCol": 9,
+                    "endLine": 150,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3917,
+                    "filePath": "libavformat/sccdec.c"
+                },
+                {
+                    "startLine": 150,
+                    "startCol": 9,
+                    "endLine": 150,
+                    "endCol": 9,
+                    "msg": "The value read from ts_end was never initialized.",
+                    "fileId": 3917,
+                    "filePath": "libavformat/sccdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "8e2d75d1e5bdb370ee409fc30db44736",
+        "checkedFile": "libavformat/sccdec.c",
+        "checkerMsg": "The value read from line[_] was never initialized.",
+        "reportId": 166990,
+        "fileId": 3917,
+        "line": 149,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 149,
+                    "startCol": 9,
+                    "endLine": 149,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3917,
+                    "filePath": "libavformat/sccdec.c"
+                },
+                {
+                    "startLine": 149,
+                    "startCol": 9,
+                    "endLine": 149,
+                    "endCol": 9,
+                    "msg": "The value read from line[_] was never initialized.",
+                    "fileId": 3917,
+                    "filePath": "libavformat/sccdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "015e4b6cef1589aa5703508656a6ce5a",
+        "checkedFile": "libavformat/sccdec.c",
+        "checkerMsg": "The value read from next_pos was never initialized.",
+        "reportId": 166991,
+        "fileId": 3917,
+        "line": 145,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 145,
+                    "startCol": 9,
+                    "endLine": 145,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3917,
+                    "filePath": "libavformat/sccdec.c"
+                },
+                {
+                    "startLine": 145,
+                    "startCol": 9,
+                    "endLine": 145,
+                    "endCol": 9,
+                    "msg": "The value read from next_pos was never initialized.",
+                    "fileId": 3917,
+                    "filePath": "libavformat/sccdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "46f6ca8115735c12b6f5e74c930370e5",
+        "checkedFile": "libavformat/sccdec.c",
+        "checkerMsg": "The value read from current_pos was never initialized.",
+        "reportId": 166992,
+        "fileId": 3917,
+        "line": 141,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 141,
+                    "startCol": 9,
+                    "endLine": 141,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3917,
+                    "filePath": "libavformat/sccdec.c"
+                },
+                {
+                    "startLine": 141,
+                    "startCol": 9,
+                    "endLine": 141,
+                    "endCol": 9,
+                    "msg": "The value read from current_pos was never initialized.",
+                    "fileId": 3917,
+                    "filePath": "libavformat/sccdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "3a24905db9330e3448c8fab442c14499",
+        "checkedFile": "libavfilter/af_compensationdelay.c",
+        "checkerMsg": "The value read from w_ptr was never initialized.",
+        "reportId": 166993,
+        "fileId": 3927,
+        "line": 158,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 158,
+                    "startCol": 5,
+                    "endLine": 158,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3927,
+                    "filePath": "libavfilter/af_compensationdelay.c"
+                },
+                {
+                    "startLine": 158,
+                    "startCol": 5,
+                    "endLine": 158,
+                    "endCol": 5,
+                    "msg": "The value read from w_ptr was never initialized.",
+                    "fileId": 3927,
+                    "filePath": "libavfilter/af_compensationdelay.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "4d1ce5f5af43beaff13f676cb6fe37ff",
+        "checkedFile": "libavcodec/sheervideo.c",
+        "checkerMsg": "The value read from ret was never initialized.",
+        "reportId": 166994,
+        "fileId": 3908,
+        "line": 2046,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2046,
+                    "startCol": 13,
+                    "endLine": 2046,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 3908,
+                    "filePath": "libavcodec/sheervideo.c"
+                },
+                {
+                    "startLine": 2046,
+                    "startCol": 13,
+                    "endLine": 2046,
+                    "endCol": 13,
+                    "msg": "The value read from ret was never initialized.",
+                    "fileId": 3908,
+                    "filePath": "libavcodec/sheervideo.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "22b14c09e67f2441d46789c252232413",
+        "checkedFile": "libavcodec/sheervideo.c",
+        "checkerMsg": "The value read from ret was never initialized.",
+        "reportId": 166995,
+        "fileId": 3908,
+        "line": 2045,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2045,
+                    "startCol": 13,
+                    "endLine": 2045,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 3908,
+                    "filePath": "libavcodec/sheervideo.c"
+                },
+                {
+                    "startLine": 2045,
+                    "startCol": 13,
+                    "endLine": 2045,
+                    "endCol": 13,
+                    "msg": "The value read from ret was never initialized.",
+                    "fileId": 3908,
+                    "filePath": "libavcodec/sheervideo.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "c47cea4d65759bd545e240651423726b",
+        "checkedFile": "libavcodec/cbs_av1.c",
+        "checkerMsg": "The value read from v was never initialized.",
+        "reportId": 166996,
+        "fileId": 3910,
+        "line": 142,
+        "column": 26,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 142,
+                    "startCol": 26,
+                    "endLine": 142,
+                    "endCol": 26,
+                    "msg": "",
+                    "fileId": 3910,
+                    "filePath": "libavcodec/cbs_av1.c"
+                },
+                {
+                    "startLine": 142,
+                    "startCol": 26,
+                    "endLine": 142,
+                    "endCol": 26,
+                    "msg": "The value read from v was never initialized.",
+                    "fileId": 3910,
+                    "filePath": "libavcodec/cbs_av1.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "7824a58e2f4ce098751b99fad7b16349",
+        "checkedFile": "libavcodec/movtextdec.c",
+        "checkerMsg": "The value written to &tsmb (type unsigned char const *) is never used.",
+        "reportId": 166997,
+        "fileId": 3921,
+        "line": 296,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 296,
+                    "startCol": 5,
+                    "endLine": 296,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 3921,
+                    "filePath": "libavcodec/movtextdec.c"
+                },
+                {
+                    "startLine": 296,
+                    "startCol": 5,
+                    "endLine": 296,
+                    "endCol": 5,
+                    "msg": "The value written to &tsmb (type unsigned char const *) is never used.",
+                    "fileId": 3921,
+                    "filePath": "libavcodec/movtextdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "68783c4cc28b563a08d7fdeb68e855c8",
+        "checkedFile": "libavcodec/movtextdec.c",
+        "checkerMsg": "The value written to &tsmb (type unsigned char const *) is never used.",
+        "reportId": 166998,
+        "fileId": 3921,
+        "line": 288,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 288,
+                    "startCol": 5,
+                    "endLine": 288,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 3921,
+                    "filePath": "libavcodec/movtextdec.c"
+                },
+                {
+                    "startLine": 288,
+                    "startCol": 5,
+                    "endLine": 288,
+                    "endCol": 5,
+                    "msg": "The value written to &tsmb (type unsigned char const *) is never used.",
+                    "fileId": 3921,
+                    "filePath": "libavcodec/movtextdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "02f0c6ca9ce47244de404d08ccd00a28",
+        "checkedFile": "libavcodec/movtextdec.c",
+        "checkerMsg": "The value written to &tsmb (type unsigned char const *) is never used.",
+        "reportId": 166999,
+        "fileId": 3921,
+        "line": 278,
+        "column": 23,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 278,
+                    "startCol": 23,
+                    "endLine": 278,
+                    "endCol": 23,
+                    "msg": "Write of unused value",
+                    "fileId": 3921,
+                    "filePath": "libavcodec/movtextdec.c"
+                },
+                {
+                    "startLine": 278,
+                    "startCol": 23,
+                    "endLine": 278,
+                    "endCol": 23,
+                    "msg": "The value written to &tsmb (type unsigned char const *) is never used.",
+                    "fileId": 3921,
+                    "filePath": "libavcodec/movtextdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "526098bcdfaa4eea922313c760309828",
+        "checkedFile": "libavcodec/wmv2enc.c",
+        "checkerMsg": "pointer `&pb->buf_ptr` last assigned on line 35 could be null and is dereferenced by call to `flush_put_bits()` at line 48, column 5.",
+        "reportId": 167000,
+        "fileId": 3918,
+        "line": 48,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 116,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 29,
+                    "startCol": 1,
+                    "endLine": 29,
+                    "endCol": 1,
+                    "msg": "start of procedure encode_ext_header()",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 31,
+                    "startCol": 5,
+                    "endLine": 31,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 35,
+                    "startCol": 5,
+                    "endLine": 35,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 48,
+                    "startCol": 1,
+                    "endLine": 48,
+                    "endCol": 1,
+                    "msg": "start of procedure init_put_bits()",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 51,
+                    "startCol": 9,
+                    "endLine": 51,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 52,
+                    "startCol": 9,
+                    "endLine": 52,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 53,
+                    "startCol": 9,
+                    "endLine": 53,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 56,
+                    "startCol": 5,
+                    "endLine": 56,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 57,
+                    "startCol": 5,
+                    "endLine": 57,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 5,
+                    "endLine": 58,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 59,
+                    "startCol": 5,
+                    "endLine": 59,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 60,
+                    "startCol": 5,
+                    "endLine": 60,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 61,
+                    "startCol": 5,
+                    "endLine": 61,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 62,
+                    "startCol": 1,
+                    "endLine": 62,
+                    "endCol": 1,
+                    "msg": "return from a call to init_put_bits",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 37,
+                    "startCol": 5,
+                    "endLine": 37,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 164,
+                    "startCol": 1,
+                    "endLine": 164,
+                    "endCol": 1,
+                    "msg": "start of procedure put_bits()",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 169,
+                    "startCol": 5,
+                    "endLine": 169,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 171,
+                    "startCol": 5,
+                    "endLine": 171,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 172,
+                    "startCol": 5,
+                    "endLine": 172,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 190,
+                    "startCol": 9,
+                    "endLine": 190,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 191,
+                    "startCol": 9,
+                    "endLine": 191,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 192,
+                    "startCol": 9,
+                    "endLine": 192,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 208,
+                    "startCol": 5,
+                    "endLine": 208,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 209,
+                    "startCol": 5,
+                    "endLine": 209,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 210,
+                    "startCol": 1,
+                    "endLine": 210,
+                    "endCol": 1,
+                    "msg": "return from a call to put_bits",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 38,
+                    "startCol": 23,
+                    "endLine": 38,
+                    "endCol": 23,
+                    "msg": "Condition is true",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 38,
+                    "startCol": 5,
+                    "endLine": 38,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 164,
+                    "startCol": 1,
+                    "endLine": 164,
+                    "endCol": 1,
+                    "msg": "start of procedure put_bits()",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 169,
+                    "startCol": 5,
+                    "endLine": 169,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 171,
+                    "startCol": 5,
+                    "endLine": 171,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 172,
+                    "startCol": 5,
+                    "endLine": 172,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 190,
+                    "startCol": 9,
+                    "endLine": 190,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 191,
+                    "startCol": 9,
+                    "endLine": 191,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 192,
+                    "startCol": 9,
+                    "endLine": 192,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 208,
+                    "startCol": 5,
+                    "endLine": 208,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 209,
+                    "startCol": 5,
+                    "endLine": 209,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 210,
+                    "startCol": 1,
+                    "endLine": 210,
+                    "endCol": 1,
+                    "msg": "return from a call to put_bits",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 40,
+                    "startCol": 5,
+                    "endLine": 40,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 164,
+                    "startCol": 1,
+                    "endLine": 164,
+                    "endCol": 1,
+                    "msg": "start of procedure put_bits()",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 169,
+                    "startCol": 5,
+                    "endLine": 169,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 171,
+                    "startCol": 5,
+                    "endLine": 171,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 172,
+                    "startCol": 5,
+                    "endLine": 172,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 190,
+                    "startCol": 9,
+                    "endLine": 190,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 191,
+                    "startCol": 9,
+                    "endLine": 191,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 192,
+                    "startCol": 9,
+                    "endLine": 192,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 208,
+                    "startCol": 5,
+                    "endLine": 208,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 209,
+                    "startCol": 5,
+                    "endLine": 209,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 210,
+                    "startCol": 1,
+                    "endLine": 210,
+                    "endCol": 1,
+                    "msg": "return from a call to put_bits",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 41,
+                    "startCol": 5,
+                    "endLine": 41,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 164,
+                    "startCol": 1,
+                    "endLine": 164,
+                    "endCol": 1,
+                    "msg": "start of procedure put_bits()",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 169,
+                    "startCol": 5,
+                    "endLine": 169,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 171,
+                    "startCol": 5,
+                    "endLine": 171,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 172,
+                    "startCol": 5,
+                    "endLine": 172,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 190,
+                    "startCol": 9,
+                    "endLine": 190,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 191,
+                    "startCol": 9,
+                    "endLine": 191,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 192,
+                    "startCol": 9,
+                    "endLine": 192,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 208,
+                    "startCol": 5,
+                    "endLine": 208,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 209,
+                    "startCol": 5,
+                    "endLine": 209,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 210,
+                    "startCol": 1,
+                    "endLine": 210,
+                    "endCol": 1,
+                    "msg": "return from a call to put_bits",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 42,
+                    "startCol": 5,
+                    "endLine": 42,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 164,
+                    "startCol": 1,
+                    "endLine": 164,
+                    "endCol": 1,
+                    "msg": "start of procedure put_bits()",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 169,
+                    "startCol": 5,
+                    "endLine": 169,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 171,
+                    "startCol": 5,
+                    "endLine": 171,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 172,
+                    "startCol": 5,
+                    "endLine": 172,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 190,
+                    "startCol": 9,
+                    "endLine": 190,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 191,
+                    "startCol": 9,
+                    "endLine": 191,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 192,
+                    "startCol": 9,
+                    "endLine": 192,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 208,
+                    "startCol": 5,
+                    "endLine": 208,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 209,
+                    "startCol": 5,
+                    "endLine": 209,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 210,
+                    "startCol": 1,
+                    "endLine": 210,
+                    "endCol": 1,
+                    "msg": "return from a call to put_bits",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 43,
+                    "startCol": 5,
+                    "endLine": 43,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 164,
+                    "startCol": 1,
+                    "endLine": 164,
+                    "endCol": 1,
+                    "msg": "start of procedure put_bits()",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 169,
+                    "startCol": 5,
+                    "endLine": 169,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 171,
+                    "startCol": 5,
+                    "endLine": 171,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 172,
+                    "startCol": 5,
+                    "endLine": 172,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 190,
+                    "startCol": 9,
+                    "endLine": 190,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 191,
+                    "startCol": 9,
+                    "endLine": 191,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 192,
+                    "startCol": 9,
+                    "endLine": 192,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 208,
+                    "startCol": 5,
+                    "endLine": 208,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 209,
+                    "startCol": 5,
+                    "endLine": 209,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 210,
+                    "startCol": 1,
+                    "endLine": 210,
+                    "endCol": 1,
+                    "msg": "return from a call to put_bits",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 44,
+                    "startCol": 5,
+                    "endLine": 44,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 164,
+                    "startCol": 1,
+                    "endLine": 164,
+                    "endCol": 1,
+                    "msg": "start of procedure put_bits()",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 169,
+                    "startCol": 5,
+                    "endLine": 169,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 171,
+                    "startCol": 5,
+                    "endLine": 171,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 172,
+                    "startCol": 5,
+                    "endLine": 172,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 190,
+                    "startCol": 9,
+                    "endLine": 190,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 191,
+                    "startCol": 9,
+                    "endLine": 191,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 192,
+                    "startCol": 9,
+                    "endLine": 192,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 208,
+                    "startCol": 5,
+                    "endLine": 208,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 209,
+                    "startCol": 5,
+                    "endLine": 209,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 210,
+                    "startCol": 1,
+                    "endLine": 210,
+                    "endCol": 1,
+                    "msg": "return from a call to put_bits",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 45,
+                    "startCol": 5,
+                    "endLine": 45,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 164,
+                    "startCol": 1,
+                    "endLine": 164,
+                    "endCol": 1,
+                    "msg": "start of procedure put_bits()",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 169,
+                    "startCol": 5,
+                    "endLine": 169,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 171,
+                    "startCol": 5,
+                    "endLine": 171,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 172,
+                    "startCol": 5,
+                    "endLine": 172,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 190,
+                    "startCol": 9,
+                    "endLine": 190,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 191,
+                    "startCol": 9,
+                    "endLine": 191,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 192,
+                    "startCol": 9,
+                    "endLine": 192,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 208,
+                    "startCol": 5,
+                    "endLine": 208,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 209,
+                    "startCol": 5,
+                    "endLine": 209,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 210,
+                    "startCol": 1,
+                    "endLine": 210,
+                    "endCol": 1,
+                    "msg": "return from a call to put_bits",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 46,
+                    "startCol": 5,
+                    "endLine": 46,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 164,
+                    "startCol": 1,
+                    "endLine": 164,
+                    "endCol": 1,
+                    "msg": "start of procedure put_bits()",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 169,
+                    "startCol": 5,
+                    "endLine": 169,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 171,
+                    "startCol": 5,
+                    "endLine": 171,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 172,
+                    "startCol": 5,
+                    "endLine": 172,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 190,
+                    "startCol": 9,
+                    "endLine": 190,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 191,
+                    "startCol": 9,
+                    "endLine": 191,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 192,
+                    "startCol": 9,
+                    "endLine": 192,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 208,
+                    "startCol": 5,
+                    "endLine": 208,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 209,
+                    "startCol": 5,
+                    "endLine": 209,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 210,
+                    "startCol": 1,
+                    "endLine": 210,
+                    "endCol": 1,
+                    "msg": "return from a call to put_bits",
+                    "fileId": 3919,
+                    "filePath": "libavcodec/put_bits.h"
+                },
+                {
+                    "startLine": 48,
+                    "startCol": 5,
+                    "endLine": 48,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 48,
+                    "startCol": 5,
+                    "endLine": 48,
+                    "endCol": 5,
+                    "msg": "pointer `&pb->buf_ptr` last assigned on line 35 could be null and is dereferenced by call to `flush_put_bits()` at line 48, column 5.",
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 29,
+                    "startCol": 1,
+                    "endLine": 29,
+                    "endCol": 1,
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                },
+                {
+                    "startLine": 31,
+                    "startCol": 5,
+                    "endLine": 31,
+                    "endCol": 5,
+                    "fileId": 3918,
+                    "filePath": "libavcodec/wmv2enc.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "a202f533c575c12dbe4717bf9156ffa9",
+        "checkedFile": "libavcodec/smvjpegdec.c",
+        "checkerMsg": "pointer `desc` last assigned on line 56 could be null and is dereferenced at line 59, column 9.",
+        "reportId": 167001,
+        "fileId": 3904,
+        "line": 59,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 10,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 51,
+                    "startCol": 1,
+                    "endLine": 51,
+                    "endCol": 1,
+                    "msg": "start of procedure smv_img_pnt()",
+                    "fileId": 3904,
+                    "filePath": "libavcodec/smvjpegdec.c"
+                },
+                {
+                    "startLine": 56,
+                    "startCol": 5,
+                    "endLine": 56,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3904,
+                    "filePath": "libavcodec/smvjpegdec.c"
+                },
+                {
+                    "startLine": 2549,
+                    "startCol": 1,
+                    "endLine": 2549,
+                    "endCol": 1,
+                    "msg": "start of procedure av_pix_fmt_desc_get()",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 2551,
+                    "startCol": 9,
+                    "endLine": 2551,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 2551,
+                    "startCol": 24,
+                    "endLine": 2551,
+                    "endCol": 24,
+                    "msg": "Taking true branch",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 2552,
+                    "startCol": 9,
+                    "endLine": 2552,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 2554,
+                    "startCol": 1,
+                    "endLine": 2554,
+                    "endCol": 1,
+                    "msg": "return from a call to av_pix_fmt_desc_get",
+                    "fileId": 3902,
+                    "filePath": "libavutil/pixdesc.c"
+                },
+                {
+                    "startLine": 57,
+                    "startCol": 5,
+                    "endLine": 57,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 3904,
+                    "filePath": "libavcodec/smvjpegdec.c"
+                },
+                {
+                    "startLine": 59,
+                    "startCol": 9,
+                    "endLine": 59,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 3904,
+                    "filePath": "libavcodec/smvjpegdec.c"
+                },
+                {
+                    "startLine": 59,
+                    "startCol": 9,
+                    "endLine": 59,
+                    "endCol": 9,
+                    "msg": "pointer `desc` last assigned on line 56 could be null and is dereferenced at line 59, column 9.",
+                    "fileId": 3904,
+                    "filePath": "libavcodec/smvjpegdec.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 51,
+                    "startCol": 1,
+                    "endLine": 51,
+                    "endCol": 1,
+                    "fileId": 3904,
+                    "filePath": "libavcodec/smvjpegdec.c"
+                },
+                {
+                    "startLine": 56,
+                    "startCol": 5,
+                    "endLine": 56,
+                    "endCol": 5,
+                    "fileId": 3904,
+                    "filePath": "libavcodec/smvjpegdec.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "74fb30f83b05a797af74f559a0daed5f",
+        "checkedFile": "libavfilter/af_acrossover.c",
+        "checkerMsg": "The value read from q was never initialized.",
+        "reportId": 167002,
+        "fileId": 3925,
+        "line": 210,
+        "column": 17,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 210,
+                    "startCol": 17,
+                    "endLine": 210,
+                    "endCol": 17,
+                    "msg": "",
+                    "fileId": 3925,
+                    "filePath": "libavfilter/af_acrossover.c"
+                },
+                {
+                    "startLine": 210,
+                    "startCol": 17,
+                    "endLine": 210,
+                    "endCol": 17,
+                    "msg": "The value read from q was never initialized.",
+                    "fileId": 3925,
+                    "filePath": "libavfilter/af_acrossover.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "ee6a75d14d2398780af43089ac2e9cf3",
+        "checkedFile": "libavfilter/af_acrossover.c",
+        "checkerMsg": "The value read from q was never initialized.",
+        "reportId": 167003,
+        "fileId": 3925,
+        "line": 209,
+        "column": 17,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 209,
+                    "startCol": 17,
+                    "endLine": 209,
+                    "endCol": 17,
+                    "msg": "",
+                    "fileId": 3925,
+                    "filePath": "libavfilter/af_acrossover.c"
+                },
+                {
+                    "startLine": 209,
+                    "startCol": 17,
+                    "endLine": 209,
+                    "endCol": 17,
+                    "msg": "The value read from q was never initialized.",
+                    "fileId": 3925,
+                    "filePath": "libavfilter/af_acrossover.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "81a5b5a763111c6824b11fff544cf446",
+        "checkedFile": "libavfilter/af_acrossover.c",
+        "checkerMsg": "The value read from q was never initialized.",
+        "reportId": 167004,
+        "fileId": 3925,
+        "line": 205,
+        "column": 17,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 205,
+                    "startCol": 17,
+                    "endLine": 205,
+                    "endCol": 17,
+                    "msg": "",
+                    "fileId": 3925,
+                    "filePath": "libavfilter/af_acrossover.c"
+                },
+                {
+                    "startLine": 205,
+                    "startCol": 17,
+                    "endLine": 205,
+                    "endCol": 17,
+                    "msg": "The value read from q was never initialized.",
+                    "fileId": 3925,
+                    "filePath": "libavfilter/af_acrossover.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "f9f2533c6a8578d0e77a198b9dd89ba2",
+        "checkedFile": "libavfilter/af_acrossover.c",
+        "checkerMsg": "The value read from q was never initialized.",
+        "reportId": 167005,
+        "fileId": 3925,
+        "line": 204,
+        "column": 17,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 204,
+                    "startCol": 17,
+                    "endLine": 204,
+                    "endCol": 17,
+                    "msg": "",
+                    "fileId": 3925,
+                    "filePath": "libavfilter/af_acrossover.c"
+                },
+                {
+                    "startLine": 204,
+                    "startCol": 17,
+                    "endLine": 204,
+                    "endCol": 17,
+                    "msg": "The value read from q was never initialized.",
+                    "fileId": 3925,
+                    "filePath": "libavfilter/af_acrossover.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "438e5224944ba62878eeddcfb7acba96",
+        "checkedFile": "libavfilter/af_acrossover.c",
+        "checkerMsg": "The value read from q was never initialized.",
+        "reportId": 167006,
+        "fileId": 3925,
+        "line": 199,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 199,
+                    "startCol": 13,
+                    "endLine": 199,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 3925,
+                    "filePath": "libavfilter/af_acrossover.c"
+                },
+                {
+                    "startLine": 199,
+                    "startCol": 13,
+                    "endLine": 199,
+                    "endCol": 13,
+                    "msg": "The value read from q was never initialized.",
+                    "fileId": 3925,
+                    "filePath": "libavfilter/af_acrossover.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "b54b48aef80a25c3354ad92c48a76699",
+        "checkedFile": "libavfilter/af_acrossover.c",
+        "checkerMsg": "The value read from q was never initialized.",
+        "reportId": 167007,
+        "fileId": 3925,
+        "line": 198,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 198,
+                    "startCol": 13,
+                    "endLine": 198,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 3925,
+                    "filePath": "libavfilter/af_acrossover.c"
+                },
+                {
+                    "startLine": 198,
+                    "startCol": 13,
+                    "endLine": 198,
+                    "endCol": 13,
+                    "msg": "The value read from q was never initialized.",
+                    "fileId": 3925,
+                    "filePath": "libavfilter/af_acrossover.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 19,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "90bade5405a01cb43973fdb18ac49ef9",
+        "checkedFile": "libavformat/tedcaptionsdec.c",
+        "checkerMsg": "The value read from content.len was never initialized.",
+        "reportId": 167008,
+        "fileId": 3923,
+        "line": 250,
+        "column": 15,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 2,
+        "detectedAt": "2022-01-23 19:32:42.179896",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 250,
+                    "startCol": 15,
+                    "endLine": 250,
+                    "endCol": 15,
+                    "msg": "",
+                    "fileId": 3923,
+                    "filePath": "libavformat/tedcaptionsdec.c"
+                },
+                {
+                    "startLine": 250,
+                    "startCol": 15,
+                    "endLine": 250,
+                    "endCol": 15,
+                    "msg": "The value read from content.len was never initialized.",
+                    "fileId": 3923,
+                    "filePath": "libavformat/tedcaptionsdec.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    }
+]

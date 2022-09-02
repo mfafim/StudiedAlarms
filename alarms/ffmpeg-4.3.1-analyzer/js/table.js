@@ -1,0 +1,1 @@
+var data = {"table_of_contents": [{"name": "Statistics", "page": 1, "url": "./html/1.html"}, {"name": "Issues by Types", "page": 2, "url": "./html/2.html", "sub_table": [{"name": "NULL pointer dereference", "page": 2, "url": "./html/2.html"}, {"name": "Use after free", "page": 9, "url": "./html/9.html"}]}], "page": "table-of-contents", "total_pages": 9, "language": "en"}

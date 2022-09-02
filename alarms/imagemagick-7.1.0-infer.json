@@ -1,0 +1,2271 @@
+[
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "717893f4ed8c9935b60da27d11e58811",
+        "checkedFile": "MagickCore/string.c",
+        "checkerMsg": "The value written to &signature_info (type _SignatureInfo*) is never used.",
+        "reportId": 78515,
+        "fileId": 5204,
+        "line": 1856,
+        "column": 3,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1856,
+                    "startCol": 3,
+                    "endLine": 1856,
+                    "endCol": 3,
+                    "msg": "Write of unused value",
+                    "fileId": 5204,
+                    "filePath": "MagickCore/string.c"
+                },
+                {
+                    "startLine": 1856,
+                    "startCol": 3,
+                    "endLine": 1856,
+                    "endCol": 3,
+                    "msg": "The value written to &signature_info (type _SignatureInfo*) is never used.",
+                    "fileId": 5204,
+                    "filePath": "MagickCore/string.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "b2cf8a5887c8a1e8d6e2210ed4bd90ea",
+        "checkedFile": "coders/miff.c",
+        "checkerMsg": "pointer `null` is dereferenced by call to `AcquireString()` at line 547, column 13.",
+        "reportId": 78516,
+        "fileId": 5209,
+        "line": 547,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 67,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 417,
+                    "startCol": 1,
+                    "endLine": 417,
+                    "endCol": 1,
+                    "msg": "start of procedure ReadMIFFImage()",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 458,
+                    "startCol": 3,
+                    "endLine": 458,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 514,
+                    "startCol": 3,
+                    "endLine": 514,
+                    "endCol": 3,
+                    "msg": "Taking true branch",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 515,
+                    "startCol": 3,
+                    "endLine": 515,
+                    "endCol": 3,
+                    "msg": "Taking true branch",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 516,
+                    "startCol": 7,
+                    "endLine": 516,
+                    "endCol": 7,
+                    "msg": "Taking true branch",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 517,
+                    "startCol": 12,
+                    "endLine": 517,
+                    "endCol": 12,
+                    "msg": "",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 1660,
+                    "startCol": 1,
+                    "endLine": 1660,
+                    "endCol": 1,
+                    "msg": "start of procedure LogMagickEvent()",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1670,
+                    "startCol": 7,
+                    "endLine": 1670,
+                    "endCol": 7,
+                    "msg": "",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 725,
+                    "startCol": 1,
+                    "endLine": 725,
+                    "endCol": 1,
+                    "msg": "start of procedure IsEventLogging()",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 727,
+                    "startCol": 3,
+                    "endLine": 727,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 728,
+                    "startCol": 1,
+                    "endLine": 728,
+                    "endCol": 1,
+                    "msg": "return from a call to IsEventLogging",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1670,
+                    "startCol": 7,
+                    "endLine": 1670,
+                    "endCol": 7,
+                    "msg": "Taking false branch",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1672,
+                    "startCol": 3,
+                    "endLine": 1672,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1673,
+                    "startCol": 3,
+                    "endLine": 1673,
+                    "endCol": 3,
+                    "msg": "Skipping LogMagickEventList(): empty list of specs",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1674,
+                    "startCol": 3,
+                    "endLine": 1674,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1675,
+                    "startCol": 3,
+                    "endLine": 1675,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1676,
+                    "startCol": 1,
+                    "endLine": 1676,
+                    "endCol": 1,
+                    "msg": "return from a call to LogMagickEvent",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 519,
+                    "startCol": 3,
+                    "endLine": 519,
+                    "endCol": 3,
+                    "msg": "Taking true branch",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 520,
+                    "startCol": 3,
+                    "endLine": 520,
+                    "endCol": 3,
+                    "msg": "Taking true branch",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 521,
+                    "startCol": 3,
+                    "endLine": 521,
+                    "endCol": 3,
+                    "msg": "Skipping AcquireImage(): empty list of specs",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 522,
+                    "startCol": 3,
+                    "endLine": 522,
+                    "endCol": 3,
+                    "msg": "Skipping OpenBlob(): empty list of specs",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 523,
+                    "startCol": 7,
+                    "endLine": 523,
+                    "endCol": 7,
+                    "msg": "Taking false branch",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 531,
+                    "startCol": 3,
+                    "endLine": 531,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 3959,
+                    "startCol": 1,
+                    "endLine": 3959,
+                    "endCol": 1,
+                    "msg": "start of procedure ReadBlobByte()",
+                    "fileId": 5211,
+                    "filePath": "MagickCore/blob.c"
+                },
+                {
+                    "startLine": 3970,
+                    "startCol": 3,
+                    "endLine": 3970,
+                    "endCol": 3,
+                    "msg": "Taking true branch",
+                    "fileId": 5211,
+                    "filePath": "MagickCore/blob.c"
+                },
+                {
+                    "startLine": 3971,
+                    "startCol": 3,
+                    "endLine": 3971,
+                    "endCol": 3,
+                    "msg": "Taking true branch",
+                    "fileId": 5211,
+                    "filePath": "MagickCore/blob.c"
+                },
+                {
+                    "startLine": 3972,
+                    "startCol": 3,
+                    "endLine": 3972,
+                    "endCol": 3,
+                    "msg": "Taking true branch",
+                    "fileId": 5211,
+                    "filePath": "MagickCore/blob.c"
+                },
+                {
+                    "startLine": 3973,
+                    "startCol": 3,
+                    "endLine": 3973,
+                    "endCol": 3,
+                    "msg": "Taking true branch",
+                    "fileId": 5211,
+                    "filePath": "MagickCore/blob.c"
+                },
+                {
+                    "startLine": 3974,
+                    "startCol": 3,
+                    "endLine": 3974,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5211,
+                    "filePath": "MagickCore/blob.c"
+                },
+                {
+                    "startLine": 3975,
+                    "startCol": 3,
+                    "endLine": 3975,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5211,
+                    "filePath": "MagickCore/blob.c"
+                },
+                {
+                    "startLine": 3977,
+                    "startCol": 5,
+                    "endLine": 3977,
+                    "endCol": 5,
+                    "msg": "Switch condition is true. Entering switch case",
+                    "fileId": 5211,
+                    "filePath": "MagickCore/blob.c"
+                },
+                {
+                    "startLine": 3984,
+                    "startCol": 7,
+                    "endLine": 3984,
+                    "endCol": 7,
+                    "msg": "",
+                    "fileId": 5211,
+                    "filePath": "MagickCore/blob.c"
+                },
+                {
+                    "startLine": 3985,
+                    "startCol": 7,
+                    "endLine": 3985,
+                    "endCol": 7,
+                    "msg": "",
+                    "fileId": 5211,
+                    "filePath": "MagickCore/blob.c"
+                },
+                {
+                    "startLine": 3986,
+                    "startCol": 11,
+                    "endLine": 3986,
+                    "endCol": 11,
+                    "msg": "Taking false branch",
+                    "fileId": 5211,
+                    "filePath": "MagickCore/blob.c"
+                },
+                {
+                    "startLine": 3988,
+                    "startCol": 7,
+                    "endLine": 3988,
+                    "endCol": 7,
+                    "msg": "",
+                    "fileId": 5211,
+                    "filePath": "MagickCore/blob.c"
+                },
+                {
+                    "startLine": 4002,
+                    "startCol": 3,
+                    "endLine": 4002,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5211,
+                    "filePath": "MagickCore/blob.c"
+                },
+                {
+                    "startLine": 4003,
+                    "startCol": 1,
+                    "endLine": 4003,
+                    "endCol": 1,
+                    "msg": "return from a call to ReadBlobByte",
+                    "fileId": 5211,
+                    "filePath": "MagickCore/blob.c"
+                },
+                {
+                    "startLine": 532,
+                    "startCol": 7,
+                    "endLine": 532,
+                    "endCol": 7,
+                    "msg": "Taking false branch",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 534,
+                    "startCol": 3,
+                    "endLine": 534,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 535,
+                    "startCol": 3,
+                    "endLine": 535,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 536,
+                    "startCol": 3,
+                    "endLine": 536,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 537,
+                    "startCol": 10,
+                    "endLine": 537,
+                    "endCol": 10,
+                    "msg": "",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 537,
+                    "startCol": 3,
+                    "endLine": 537,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 538,
+                    "startCol": 3,
+                    "endLine": 538,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 539,
+                    "startCol": 3,
+                    "endLine": 539,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 545,
+                    "startCol": 5,
+                    "endLine": 545,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 1730,
+                    "startCol": 1,
+                    "endLine": 1730,
+                    "endCol": 1,
+                    "msg": "start of procedure SetGeometryInfo()",
+                    "fileId": 5212,
+                    "filePath": "MagickCore/geometry.c"
+                },
+                {
+                    "startLine": 1732,
+                    "startCol": 3,
+                    "endLine": 1732,
+                    "endCol": 3,
+                    "msg": "Taking true branch",
+                    "fileId": 5212,
+                    "filePath": "MagickCore/geometry.c"
+                },
+                {
+                    "startLine": 1733,
+                    "startCol": 10,
+                    "endLine": 1733,
+                    "endCol": 10,
+                    "msg": "",
+                    "fileId": 5212,
+                    "filePath": "MagickCore/geometry.c"
+                },
+                {
+                    "startLine": 1660,
+                    "startCol": 1,
+                    "endLine": 1660,
+                    "endCol": 1,
+                    "msg": "start of procedure LogMagickEvent()",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1670,
+                    "startCol": 7,
+                    "endLine": 1670,
+                    "endCol": 7,
+                    "msg": "",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 725,
+                    "startCol": 1,
+                    "endLine": 725,
+                    "endCol": 1,
+                    "msg": "start of procedure IsEventLogging()",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 727,
+                    "startCol": 3,
+                    "endLine": 727,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 728,
+                    "startCol": 1,
+                    "endLine": 728,
+                    "endCol": 1,
+                    "msg": "return from a call to IsEventLogging",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1670,
+                    "startCol": 7,
+                    "endLine": 1670,
+                    "endCol": 7,
+                    "msg": "Taking false branch",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1672,
+                    "startCol": 3,
+                    "endLine": 1672,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1673,
+                    "startCol": 3,
+                    "endLine": 1673,
+                    "endCol": 3,
+                    "msg": "Skipping LogMagickEventList(): empty list of specs",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1674,
+                    "startCol": 3,
+                    "endLine": 1674,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1675,
+                    "startCol": 3,
+                    "endLine": 1675,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1676,
+                    "startCol": 1,
+                    "endLine": 1676,
+                    "endCol": 1,
+                    "msg": "return from a call to LogMagickEvent",
+                    "fileId": 5210,
+                    "filePath": "MagickCore/log.c"
+                },
+                {
+                    "startLine": 1733,
+                    "startCol": 3,
+                    "endLine": 1733,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5212,
+                    "filePath": "MagickCore/geometry.c"
+                },
+                {
+                    "startLine": 1734,
+                    "startCol": 10,
+                    "endLine": 1734,
+                    "endCol": 10,
+                    "msg": "",
+                    "fileId": 5212,
+                    "filePath": "MagickCore/geometry.c"
+                },
+                {
+                    "startLine": 1734,
+                    "startCol": 3,
+                    "endLine": 1734,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5212,
+                    "filePath": "MagickCore/geometry.c"
+                },
+                {
+                    "startLine": 1735,
+                    "startCol": 1,
+                    "endLine": 1735,
+                    "endCol": 1,
+                    "msg": "return from a call to SetGeometryInfo",
+                    "fileId": 5212,
+                    "filePath": "MagickCore/geometry.c"
+                },
+                {
+                    "startLine": 546,
+                    "startCol": 5,
+                    "endLine": 546,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 547,
+                    "startCol": 5,
+                    "endLine": 547,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 547,
+                    "startCol": 13,
+                    "endLine": 547,
+                    "endCol": 13,
+                    "msg": "pointer `null` is dereferenced by call to `AcquireString()` at line 547, column 13.",
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 417,
+                    "startCol": 1,
+                    "endLine": 417,
+                    "endCol": 1,
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                },
+                {
+                    "startLine": 458,
+                    "startCol": 3,
+                    "endLine": 458,
+                    "endCol": 3,
+                    "fileId": 5209,
+                    "filePath": "coders/miff.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "87c6f6d34bf9e7fe247c361c877d56e7",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78517,
+        "fileId": 5201,
+        "line": 3020,
+        "column": 3,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 3020,
+                    "startCol": 3,
+                    "endLine": 3020,
+                    "endCol": 3,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 3020,
+                    "startCol": 3,
+                    "endLine": 3020,
+                    "endCol": 3,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "87c6f6d34bf9e7fe247c361c877d56e7",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78518,
+        "fileId": 5201,
+        "line": 2825,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2825,
+                    "startCol": 7,
+                    "endLine": 2825,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 2825,
+                    "startCol": 7,
+                    "endLine": 2825,
+                    "endCol": 7,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "6218bb31ebfe164fedc456cc7c8aee72",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78519,
+        "fileId": 5201,
+        "line": 2820,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2820,
+                    "startCol": 5,
+                    "endLine": 2820,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 2820,
+                    "startCol": 5,
+                    "endLine": 2820,
+                    "endCol": 5,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "edd54016d5b0a5d53f14ce14117450fc",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78520,
+        "fileId": 5201,
+        "line": 2305,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2305,
+                    "startCol": 5,
+                    "endLine": 2305,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 2305,
+                    "startCol": 5,
+                    "endLine": 2305,
+                    "endCol": 5,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "87c6f6d34bf9e7fe247c361c877d56e7",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78521,
+        "fileId": 5201,
+        "line": 2296,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2296,
+                    "startCol": 7,
+                    "endLine": 2296,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 2296,
+                    "startCol": 7,
+                    "endLine": 2296,
+                    "endCol": 7,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "6218bb31ebfe164fedc456cc7c8aee72",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78522,
+        "fileId": 5201,
+        "line": 2281,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2281,
+                    "startCol": 5,
+                    "endLine": 2281,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 2281,
+                    "startCol": 5,
+                    "endLine": 2281,
+                    "endCol": 5,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "87c6f6d34bf9e7fe247c361c877d56e7",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78523,
+        "fileId": 5201,
+        "line": 1558,
+        "column": 3,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1558,
+                    "startCol": 3,
+                    "endLine": 1558,
+                    "endCol": 3,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 1558,
+                    "startCol": 3,
+                    "endLine": 1558,
+                    "endCol": 3,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "87c6f6d34bf9e7fe247c361c877d56e7",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78524,
+        "fileId": 5201,
+        "line": 1399,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1399,
+                    "startCol": 7,
+                    "endLine": 1399,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 1399,
+                    "startCol": 7,
+                    "endLine": 1399,
+                    "endCol": 7,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "8539ede68e152d3fb01ec89ad1cbeb5b",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78525,
+        "fileId": 5201,
+        "line": 1386,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1386,
+                    "startCol": 7,
+                    "endLine": 1386,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 1386,
+                    "startCol": 7,
+                    "endLine": 1386,
+                    "endCol": 7,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "35386cbdbf26ef0d93c8c2ed28315e12",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78526,
+        "fileId": 5201,
+        "line": 1379,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1379,
+                    "startCol": 7,
+                    "endLine": 1379,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 1379,
+                    "startCol": 7,
+                    "endLine": 1379,
+                    "endCol": 7,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "87c6f6d34bf9e7fe247c361c877d56e7",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78527,
+        "fileId": 5201,
+        "line": 1371,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1371,
+                    "startCol": 7,
+                    "endLine": 1371,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 1371,
+                    "startCol": 7,
+                    "endLine": 1371,
+                    "endCol": 7,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "87c6f6d34bf9e7fe247c361c877d56e7",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78528,
+        "fileId": 5201,
+        "line": 1363,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1363,
+                    "startCol": 7,
+                    "endLine": 1363,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 1363,
+                    "startCol": 7,
+                    "endLine": 1363,
+                    "endCol": 7,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "87c6f6d34bf9e7fe247c361c877d56e7",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78529,
+        "fileId": 5201,
+        "line": 1357,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1357,
+                    "startCol": 7,
+                    "endLine": 1357,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 1357,
+                    "startCol": 7,
+                    "endLine": 1357,
+                    "endCol": 7,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "8539ede68e152d3fb01ec89ad1cbeb5b",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78530,
+        "fileId": 5201,
+        "line": 1329,
+        "column": 11,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1329,
+                    "startCol": 11,
+                    "endLine": 1329,
+                    "endCol": 11,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 1329,
+                    "startCol": 11,
+                    "endLine": 1329,
+                    "endCol": 11,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "8539ede68e152d3fb01ec89ad1cbeb5b",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78531,
+        "fileId": 5201,
+        "line": 1318,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1318,
+                    "startCol": 9,
+                    "endLine": 1318,
+                    "endCol": 9,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 1318,
+                    "startCol": 9,
+                    "endLine": 1318,
+                    "endCol": 9,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "87c6f6d34bf9e7fe247c361c877d56e7",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78532,
+        "fileId": 5201,
+        "line": 1132,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1132,
+                    "startCol": 7,
+                    "endLine": 1132,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 1132,
+                    "startCol": 7,
+                    "endLine": 1132,
+                    "endCol": 7,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "8539ede68e152d3fb01ec89ad1cbeb5b",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78533,
+        "fileId": 5201,
+        "line": 1118,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1118,
+                    "startCol": 5,
+                    "endLine": 1118,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 1118,
+                    "startCol": 5,
+                    "endLine": 1118,
+                    "endCol": 5,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "0f67b03f4aa387d00ede88e2c1f36259",
+        "checkedFile": "coders/jpeg.c",
+        "checkerMsg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+        "reportId": 78534,
+        "fileId": 5201,
+        "line": 1112,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1112,
+                    "startCol": 5,
+                    "endLine": 1112,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                },
+                {
+                    "startLine": 1112,
+                    "startCol": 5,
+                    "endLine": 1112,
+                    "endCol": 5,
+                    "msg": "The value written to &client_info (type _JPEGClientInfo*) is never used.",
+                    "fileId": 5201,
+                    "filePath": "coders/jpeg.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "15a557d05f03b07c52b69cf03c9768e9",
+        "checkedFile": "coders/dds.c",
+        "checkerMsg": "The value written to &num_images (type unsigned long) is never used.",
+        "reportId": 78535,
+        "fileId": 5207,
+        "line": 2078,
+        "column": 11,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2078,
+                    "startCol": 11,
+                    "endLine": 2078,
+                    "endCol": 11,
+                    "msg": "Write of unused value",
+                    "fileId": 5207,
+                    "filePath": "coders/dds.c"
+                },
+                {
+                    "startLine": 2078,
+                    "startCol": 11,
+                    "endLine": 2078,
+                    "endCol": 11,
+                    "msg": "The value written to &num_images (type unsigned long) is never used.",
+                    "fileId": 5207,
+                    "filePath": "coders/dds.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "2706aff645c1b9ca83d0b0c5b75805fe",
+        "checkedFile": "MagickCore/xml-tree-private.h",
+        "checkerMsg": "pointer `null` is dereferenced by call to `AcquireString()` at line 50, column 21.",
+        "reportId": 78536,
+        "fileId": 5205,
+        "line": 50,
+        "column": 21,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 4,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 31,
+                    "startCol": 1,
+                    "endLine": 31,
+                    "endCol": 1,
+                    "msg": "start of procedure SubstituteXMLEntities()",
+                    "fileId": 5205,
+                    "filePath": "MagickCore/xml-tree-private.h"
+                },
+                {
+                    "startLine": 49,
+                    "startCol": 3,
+                    "endLine": 49,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5205,
+                    "filePath": "MagickCore/xml-tree-private.h"
+                },
+                {
+                    "startLine": 50,
+                    "startCol": 3,
+                    "endLine": 50,
+                    "endCol": 3,
+                    "msg": "",
+                    "fileId": 5205,
+                    "filePath": "MagickCore/xml-tree-private.h"
+                },
+                {
+                    "startLine": 50,
+                    "startCol": 21,
+                    "endLine": 50,
+                    "endCol": 21,
+                    "msg": "pointer `null` is dereferenced by call to `AcquireString()` at line 50, column 21.",
+                    "fileId": 5205,
+                    "filePath": "MagickCore/xml-tree-private.h"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 31,
+                    "startCol": 1,
+                    "endLine": 31,
+                    "endCol": 1,
+                    "fileId": 5205,
+                    "filePath": "MagickCore/xml-tree-private.h"
+                },
+                {
+                    "startLine": 49,
+                    "startCol": 3,
+                    "endLine": 49,
+                    "endCol": 3,
+                    "fileId": 5205,
+                    "filePath": "MagickCore/xml-tree-private.h"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "e987acf744eec38b03949868f296607d",
+        "checkedFile": "coders/pdf.c",
+        "checkerMsg": "The value written to &producer (type char*) is never used.",
+        "reportId": 78537,
+        "fileId": 5202,
+        "line": 3098,
+        "column": 3,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 3098,
+                    "startCol": 3,
+                    "endLine": 3098,
+                    "endCol": 3,
+                    "msg": "Write of unused value",
+                    "fileId": 5202,
+                    "filePath": "coders/pdf.c"
+                },
+                {
+                    "startLine": 3098,
+                    "startCol": 3,
+                    "endLine": 3098,
+                    "endCol": 3,
+                    "msg": "The value written to &producer (type char*) is never used.",
+                    "fileId": 5202,
+                    "filePath": "coders/pdf.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "5d6781cb324d4568b45f65a8566cff65",
+        "checkedFile": "coders/pdf.c",
+        "checkerMsg": "The value written to &author (type char*) is never used.",
+        "reportId": 78538,
+        "fileId": 5202,
+        "line": 3093,
+        "column": 3,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 3093,
+                    "startCol": 3,
+                    "endLine": 3093,
+                    "endCol": 3,
+                    "msg": "Write of unused value",
+                    "fileId": 5202,
+                    "filePath": "coders/pdf.c"
+                },
+                {
+                    "startLine": 3093,
+                    "startCol": 3,
+                    "endLine": 3093,
+                    "endCol": 3,
+                    "msg": "The value written to &author (type char*) is never used.",
+                    "fileId": 5202,
+                    "filePath": "coders/pdf.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "781b7eb2dc073827cfdc815b9e875726",
+        "checkedFile": "coders/pdf.c",
+        "checkerMsg": "The value written to &title (type char*) is never used.",
+        "reportId": 78539,
+        "fileId": 5202,
+        "line": 3037,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 3037,
+                    "startCol": 7,
+                    "endLine": 3037,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5202,
+                    "filePath": "coders/pdf.c"
+                },
+                {
+                    "startLine": 3037,
+                    "startCol": 7,
+                    "endLine": 3037,
+                    "endCol": 7,
+                    "msg": "The value written to &title (type char*) is never used.",
+                    "fileId": 5202,
+                    "filePath": "coders/pdf.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "5d6781cb324d4568b45f65a8566cff65",
+        "checkedFile": "coders/pdf.c",
+        "checkerMsg": "The value written to &author (type char*) is never used.",
+        "reportId": 78540,
+        "fileId": 5202,
+        "line": 1516,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1516,
+                    "startCol": 7,
+                    "endLine": 1516,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5202,
+                    "filePath": "coders/pdf.c"
+                },
+                {
+                    "startLine": 1516,
+                    "startCol": 7,
+                    "endLine": 1516,
+                    "endCol": 7,
+                    "msg": "The value written to &author (type char*) is never used.",
+                    "fileId": 5202,
+                    "filePath": "coders/pdf.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "781b7eb2dc073827cfdc815b9e875726",
+        "checkedFile": "coders/pdf.c",
+        "checkerMsg": "The value written to &title (type char*) is never used.",
+        "reportId": 78541,
+        "fileId": 5202,
+        "line": 1515,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1515,
+                    "startCol": 7,
+                    "endLine": 1515,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5202,
+                    "filePath": "coders/pdf.c"
+                },
+                {
+                    "startLine": 1515,
+                    "startCol": 7,
+                    "endLine": 1515,
+                    "endCol": 7,
+                    "msg": "The value written to &title (type char*) is never used.",
+                    "fileId": 5202,
+                    "filePath": "coders/pdf.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "e987acf744eec38b03949868f296607d",
+        "checkedFile": "coders/pdf.c",
+        "checkerMsg": "The value written to &producer (type char*) is never used.",
+        "reportId": 78542,
+        "fileId": 5202,
+        "line": 1514,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1514,
+                    "startCol": 7,
+                    "endLine": 1514,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5202,
+                    "filePath": "coders/pdf.c"
+                },
+                {
+                    "startLine": 1514,
+                    "startCol": 7,
+                    "endLine": 1514,
+                    "endCol": 7,
+                    "msg": "The value written to &producer (type char*) is never used.",
+                    "fileId": 5202,
+                    "filePath": "coders/pdf.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "c1e756b471df8cc9e2934cc6d03b420a",
+        "checkedFile": "MagickCore/image.c",
+        "checkerMsg": "The value written to &magick_info (type _MagickInfo const *) is never used.",
+        "reportId": 78543,
+        "fileId": 5206,
+        "line": 2877,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2877,
+                    "startCol": 5,
+                    "endLine": 2877,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5206,
+                    "filePath": "MagickCore/image.c"
+                },
+                {
+                    "startLine": 2877,
+                    "startCol": 5,
+                    "endLine": 2877,
+                    "endCol": 5,
+                    "msg": "The value written to &magick_info (type _MagickInfo const *) is never used.",
+                    "fileId": 5206,
+                    "filePath": "MagickCore/image.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "ece3add1d9d312402451df0ace694f47",
+        "checkedFile": "coders/video.c",
+        "checkerMsg": "The value written to &options (type char*) is never used.",
+        "reportId": 78544,
+        "fileId": 5208,
+        "line": 633,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 633,
+                    "startCol": 7,
+                    "endLine": 633,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5208,
+                    "filePath": "coders/video.c"
+                },
+                {
+                    "startLine": 633,
+                    "startCol": 7,
+                    "endLine": 633,
+                    "endCol": 7,
+                    "msg": "The value written to &options (type char*) is never used.",
+                    "fileId": 5208,
+                    "filePath": "coders/video.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "4892608456dfa41c87560d27b0c100b4",
+        "checkedFile": "coders/mpc.c",
+        "checkerMsg": "The value written to &nonce (type _StringInfo*) is never used.",
+        "reportId": 78545,
+        "fileId": 5203,
+        "line": 1202,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1202,
+                    "startCol": 5,
+                    "endLine": 1202,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5203,
+                    "filePath": "coders/mpc.c"
+                },
+                {
+                    "startLine": 1202,
+                    "startCol": 5,
+                    "endLine": 1202,
+                    "endCol": 5,
+                    "msg": "The value written to &nonce (type _StringInfo*) is never used.",
+                    "fileId": 5203,
+                    "filePath": "coders/mpc.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "4892608456dfa41c87560d27b0c100b4",
+        "checkedFile": "coders/mpc.c",
+        "checkerMsg": "The value written to &nonce (type _StringInfo*) is never used.",
+        "reportId": 78546,
+        "fileId": 5203,
+        "line": 817,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 817,
+                    "startCol": 5,
+                    "endLine": 817,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5203,
+                    "filePath": "coders/mpc.c"
+                },
+                {
+                    "startLine": 817,
+                    "startCol": 5,
+                    "endLine": 817,
+                    "endCol": 5,
+                    "msg": "The value written to &nonce (type _StringInfo*) is never used.",
+                    "fileId": 5203,
+                    "filePath": "coders/mpc.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "4892608456dfa41c87560d27b0c100b4",
+        "checkedFile": "coders/mpc.c",
+        "checkerMsg": "The value written to &nonce (type _StringInfo*) is never used.",
+        "reportId": 78547,
+        "fileId": 5203,
+        "line": 812,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 812,
+                    "startCol": 9,
+                    "endLine": 812,
+                    "endCol": 9,
+                    "msg": "Write of unused value",
+                    "fileId": 5203,
+                    "filePath": "coders/mpc.c"
+                },
+                {
+                    "startLine": 812,
+                    "startCol": 9,
+                    "endLine": 812,
+                    "endCol": 9,
+                    "msg": "The value written to &nonce (type _StringInfo*) is never used.",
+                    "fileId": 5203,
+                    "filePath": "coders/mpc.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 26,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "4892608456dfa41c87560d27b0c100b4",
+        "checkedFile": "coders/mpc.c",
+        "checkerMsg": "The value written to &nonce (type _StringInfo*) is never used.",
+        "reportId": 78548,
+        "fileId": 5203,
+        "line": 238,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.935714",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 238,
+                    "startCol": 5,
+                    "endLine": 238,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5203,
+                    "filePath": "coders/mpc.c"
+                },
+                {
+                    "startLine": 238,
+                    "startCol": 5,
+                    "endLine": 238,
+                    "endCol": 5,
+                    "msg": "The value written to &nonce (type _StringInfo*) is never used.",
+                    "fileId": 5203,
+                    "filePath": "coders/mpc.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    }
+]

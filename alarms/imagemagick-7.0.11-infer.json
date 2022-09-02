@@ -1,0 +1,338 @@
+[
+    {
+        "runId": 25,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "aae60f6b333203109f72e2ab3da15efd",
+        "checkedFile": "coders/psd.c",
+        "checkerMsg": "The value written to &size_offset (type long long) is never used.",
+        "reportId": 78508,
+        "fileId": 5197,
+        "line": 3943,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.321302",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 3943,
+                    "startCol": 7,
+                    "endLine": 3943,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5197,
+                    "filePath": "coders/psd.c"
+                },
+                {
+                    "startLine": 3943,
+                    "startCol": 7,
+                    "endLine": 3943,
+                    "endCol": 7,
+                    "msg": "The value written to &size_offset (type long long) is never used.",
+                    "fileId": 5197,
+                    "filePath": "coders/psd.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 25,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "c3a7f6375272056377dd5a3178fe77bd",
+        "checkedFile": "coders/pdf.c",
+        "checkerMsg": "The value written to &escape (type char*) is never used.",
+        "reportId": 78509,
+        "fileId": 5200,
+        "line": 3011,
+        "column": 3,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.321302",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 3011,
+                    "startCol": 3,
+                    "endLine": 3011,
+                    "endCol": 3,
+                    "msg": "Write of unused value",
+                    "fileId": 5200,
+                    "filePath": "coders/pdf.c"
+                },
+                {
+                    "startLine": 3011,
+                    "startCol": 3,
+                    "endLine": 3011,
+                    "endCol": 3,
+                    "msg": "The value written to &escape (type char*) is never used.",
+                    "fileId": 5200,
+                    "filePath": "coders/pdf.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 25,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "c3a7f6375272056377dd5a3178fe77bd",
+        "checkedFile": "coders/pdf.c",
+        "checkerMsg": "The value written to &escape (type char*) is never used.",
+        "reportId": 78510,
+        "fileId": 5200,
+        "line": 2955,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.321302",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2955,
+                    "startCol": 7,
+                    "endLine": 2955,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5200,
+                    "filePath": "coders/pdf.c"
+                },
+                {
+                    "startLine": 2955,
+                    "startCol": 7,
+                    "endLine": 2955,
+                    "endCol": 7,
+                    "msg": "The value written to &escape (type char*) is never used.",
+                    "fileId": 5200,
+                    "filePath": "coders/pdf.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 25,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "c3a7f6375272056377dd5a3178fe77bd",
+        "checkedFile": "coders/pdf.c",
+        "checkerMsg": "The value written to &escape (type char*) is never used.",
+        "reportId": 78511,
+        "fileId": 5200,
+        "line": 1432,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.321302",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1432,
+                    "startCol": 7,
+                    "endLine": 1432,
+                    "endCol": 7,
+                    "msg": "Write of unused value",
+                    "fileId": 5200,
+                    "filePath": "coders/pdf.c"
+                },
+                {
+                    "startLine": 1432,
+                    "startCol": 7,
+                    "endLine": 1432,
+                    "endCol": 7,
+                    "msg": "The value written to &escape (type char*) is never used.",
+                    "fileId": 5200,
+                    "filePath": "coders/pdf.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 25,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "f724ee6baa5cbb4153acd562f2996e11",
+        "checkedFile": "coders/webp.c",
+        "checkerMsg": "The value read from canvas_height was never initialized.",
+        "reportId": 78512,
+        "fileId": 5199,
+        "line": 284,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.321302",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 284,
+                    "startCol": 7,
+                    "endLine": 284,
+                    "endCol": 7,
+                    "msg": "",
+                    "fileId": 5199,
+                    "filePath": "coders/webp.c"
+                },
+                {
+                    "startLine": 284,
+                    "startCol": 7,
+                    "endLine": 284,
+                    "endCol": 7,
+                    "msg": "The value read from canvas_height was never initialized.",
+                    "fileId": 5199,
+                    "filePath": "coders/webp.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 25,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "f95f9f9a48e420e0a6115a91a5751244",
+        "checkedFile": "coders/webp.c",
+        "checkerMsg": "The value read from canvas_width was never initialized.",
+        "reportId": 78513,
+        "fileId": 5199,
+        "line": 283,
+        "column": 7,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.321302",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 283,
+                    "startCol": 7,
+                    "endLine": 283,
+                    "endCol": 7,
+                    "msg": "",
+                    "fileId": 5199,
+                    "filePath": "coders/webp.c"
+                },
+                {
+                    "startLine": 283,
+                    "startCol": 7,
+                    "endLine": 283,
+                    "endCol": 7,
+                    "msg": "The value read from canvas_width was never initialized.",
+                    "fileId": 5199,
+                    "filePath": "coders/webp.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 25,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "c1d0a89c39c3f2b5350d5b364c45a41f",
+        "checkedFile": "coders/video.c",
+        "checkerMsg": "The value written to &status (type int) is never used.",
+        "reportId": 78514,
+        "fileId": 5198,
+        "line": 615,
+        "column": 3,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 15:34:22.321302",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 615,
+                    "startCol": 3,
+                    "endLine": 615,
+                    "endCol": 3,
+                    "msg": "Write of unused value",
+                    "fileId": 5198,
+                    "filePath": "coders/video.c"
+                },
+                {
+                    "startLine": 615,
+                    "startCol": 3,
+                    "endLine": 615,
+                    "endCol": 3,
+                    "msg": "The value written to &status (type int) is never used.",
+                    "fileId": 5198,
+                    "filePath": "coders/video.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    }
+]

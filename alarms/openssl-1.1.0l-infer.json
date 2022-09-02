@@ -1,0 +1,4616 @@
+[
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "bebdc564ad1dbbf05f3442eda95488ad",
+        "checkedFile": "test/ct_test.c",
+        "checkerMsg": "The value written to &sep (type char*) is never used.",
+        "reportId": 91611,
+        "fileId": 5361,
+        "line": 102,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 102,
+                    "startCol": 5,
+                    "endLine": 102,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5361,
+                    "filePath": "test/ct_test.c"
+                },
+                {
+                    "startLine": 102,
+                    "startCol": 5,
+                    "endLine": 102,
+                    "endCol": 5,
+                    "msg": "The value written to &sep (type char*) is never used.",
+                    "fileId": 5361,
+                    "filePath": "test/ct_test.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "e37ef62c182553e93736aa73a58893b4",
+        "checkedFile": "crypto/pkcs12/p12_sbag.c",
+        "checkerMsg": "pointer `pbe_ciph` last assigned on line 148 could be null and is dereferenced by call to `PKCS8_encrypt()` at line 153, column 10.",
+        "reportId": 91612,
+        "fileId": 5365,
+        "line": 153,
+        "column": 10,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 40,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 137,
+                    "startCol": 1,
+                    "endLine": 137,
+                    "endCol": 1,
+                    "msg": "start of procedure PKCS12_SAFEBAG_create_pkcs8_encrypt()",
+                    "fileId": 5365,
+                    "filePath": "crypto/pkcs12/p12_sbag.c"
+                },
+                {
+                    "startLine": 148,
+                    "startCol": 5,
+                    "endLine": 148,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5365,
+                    "filePath": "crypto/pkcs12/p12_sbag.c"
+                },
+                {
+                    "startLine": 247,
+                    "startCol": 1,
+                    "endLine": 247,
+                    "endCol": 1,
+                    "msg": "start of procedure OBJ_nid2sn()",
+                    "fileId": 5366,
+                    "filePath": "crypto/objects/obj_dat.c"
+                },
+                {
+                    "startLine": 252,
+                    "startCol": 10,
+                    "endLine": 252,
+                    "endCol": 10,
+                    "msg": "Taking true branch",
+                    "fileId": 5366,
+                    "filePath": "crypto/objects/obj_dat.c"
+                },
+                {
+                    "startLine": 252,
+                    "startCol": 22,
+                    "endLine": 252,
+                    "endCol": 22,
+                    "msg": "Taking false branch",
+                    "fileId": 5366,
+                    "filePath": "crypto/objects/obj_dat.c"
+                },
+                {
+                    "startLine": 258,
+                    "startCol": 16,
+                    "endLine": 258,
+                    "endCol": 16,
+                    "msg": "Taking false branch",
+                    "fileId": 5366,
+                    "filePath": "crypto/objects/obj_dat.c"
+                },
+                {
+                    "startLine": 261,
+                    "startCol": 9,
+                    "endLine": 261,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5366,
+                    "filePath": "crypto/objects/obj_dat.c"
+                },
+                {
+                    "startLine": 262,
+                    "startCol": 9,
+                    "endLine": 262,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5366,
+                    "filePath": "crypto/objects/obj_dat.c"
+                },
+                {
+                    "startLine": 263,
+                    "startCol": 9,
+                    "endLine": 263,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5366,
+                    "filePath": "crypto/objects/obj_dat.c"
+                },
+                {
+                    "startLine": 264,
+                    "startCol": 9,
+                    "endLine": 264,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5366,
+                    "filePath": "crypto/objects/obj_dat.c"
+                },
+                {
+                    "startLine": 14,
+                    "startCol": 1,
+                    "endLine": 14,
+                    "endCol": 1,
+                    "msg": "start of procedure lh_ADDED_OBJ_retrieve()",
+                    "fileId": 5367,
+                    "filePath": "crypto/objects/obj_lcl.h"
+                },
+                {
+                    "startLine": 153,
+                    "startCol": 1,
+                    "endLine": 153,
+                    "endCol": 1,
+                    "msg": "start of procedure OPENSSL_LH_retrieve()",
+                    "fileId": 5368,
+                    "filePath": "crypto/lhash/lhash.c"
+                },
+                {
+                    "startLine": 160,
+                    "startCol": 5,
+                    "endLine": 160,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5368,
+                    "filePath": "crypto/lhash/lhash.c"
+                },
+                {
+                    "startLine": 161,
+                    "startCol": 5,
+                    "endLine": 161,
+                    "endCol": 5,
+                    "msg": "Skipping getrn(): empty list of specs",
+                    "fileId": 5368,
+                    "filePath": "crypto/lhash/lhash.c"
+                },
+                {
+                    "startLine": 163,
+                    "startCol": 9,
+                    "endLine": 163,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 5368,
+                    "filePath": "crypto/lhash/lhash.c"
+                },
+                {
+                    "startLine": 164,
+                    "startCol": 9,
+                    "endLine": 164,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5368,
+                    "filePath": "crypto/lhash/lhash.c"
+                },
+                {
+                    "startLine": 151,
+                    "startCol": 1,
+                    "endLine": 151,
+                    "endCol": 1,
+                    "msg": "start of procedure CRYPTO_atomic_add()",
+                    "fileId": 5369,
+                    "filePath": "crypto/threads_pthread.c"
+                },
+                {
+                    "startLine": 154,
+                    "startCol": 9,
+                    "endLine": 154,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5369,
+                    "filePath": "crypto/threads_pthread.c"
+                },
+                {
+                    "startLine": 159,
+                    "startCol": 10,
+                    "endLine": 159,
+                    "endCol": 10,
+                    "msg": "",
+                    "fileId": 5369,
+                    "filePath": "crypto/threads_pthread.c"
+                },
+                {
+                    "startLine": 63,
+                    "startCol": 1,
+                    "endLine": 63,
+                    "endCol": 1,
+                    "msg": "start of procedure CRYPTO_THREAD_write_lock()",
+                    "fileId": 5369,
+                    "filePath": "crypto/threads_pthread.c"
+                },
+                {
+                    "startLine": 66,
+                    "startCol": 9,
+                    "endLine": 66,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 5369,
+                    "filePath": "crypto/threads_pthread.c"
+                },
+                {
+                    "startLine": 67,
+                    "startCol": 9,
+                    "endLine": 67,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5369,
+                    "filePath": "crypto/threads_pthread.c"
+                },
+                {
+                    "startLine": 74,
+                    "startCol": 1,
+                    "endLine": 74,
+                    "endCol": 1,
+                    "msg": "return from a call to CRYPTO_THREAD_write_lock",
+                    "fileId": 5369,
+                    "filePath": "crypto/threads_pthread.c"
+                },
+                {
+                    "startLine": 159,
+                    "startCol": 10,
+                    "endLine": 159,
+                    "endCol": 10,
+                    "msg": "Taking true branch",
+                    "fileId": 5369,
+                    "filePath": "crypto/threads_pthread.c"
+                },
+                {
+                    "startLine": 160,
+                    "startCol": 9,
+                    "endLine": 160,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5369,
+                    "filePath": "crypto/threads_pthread.c"
+                },
+                {
+                    "startLine": 169,
+                    "startCol": 1,
+                    "endLine": 169,
+                    "endCol": 1,
+                    "msg": "return from a call to CRYPTO_atomic_add",
+                    "fileId": 5369,
+                    "filePath": "crypto/threads_pthread.c"
+                },
+                {
+                    "startLine": 165,
+                    "startCol": 9,
+                    "endLine": 165,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5368,
+                    "filePath": "crypto/lhash/lhash.c"
+                },
+                {
+                    "startLine": 171,
+                    "startCol": 1,
+                    "endLine": 171,
+                    "endCol": 1,
+                    "msg": "return from a call to OPENSSL_LH_retrieve",
+                    "fileId": 5368,
+                    "filePath": "crypto/lhash/lhash.c"
+                },
+                {
+                    "startLine": 14,
+                    "startCol": 1,
+                    "endLine": 14,
+                    "endCol": 1,
+                    "msg": "return from a call to lh_ADDED_OBJ_retrieve",
+                    "fileId": 5367,
+                    "filePath": "crypto/objects/obj_lcl.h"
+                },
+                {
+                    "startLine": 265,
+                    "startCol": 13,
+                    "endLine": 265,
+                    "endCol": 13,
+                    "msg": "Taking false branch",
+                    "fileId": 5366,
+                    "filePath": "crypto/objects/obj_dat.c"
+                },
+                {
+                    "startLine": 268,
+                    "startCol": 13,
+                    "endLine": 268,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 5366,
+                    "filePath": "crypto/objects/obj_dat.c"
+                },
+                {
+                    "startLine": 269,
+                    "startCol": 13,
+                    "endLine": 269,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 5366,
+                    "filePath": "crypto/objects/obj_dat.c"
+                },
+                {
+                    "startLine": 272,
+                    "startCol": 1,
+                    "endLine": 272,
+                    "endCol": 1,
+                    "msg": "return from a call to OBJ_nid2sn",
+                    "fileId": 5366,
+                    "filePath": "crypto/objects/obj_dat.c"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 1,
+                    "endLine": 58,
+                    "endCol": 1,
+                    "msg": "start of procedure EVP_get_cipherbyname()",
+                    "fileId": 5370,
+                    "filePath": "crypto/evp/names.c"
+                },
+                {
+                    "startLine": 62,
+                    "startCol": 10,
+                    "endLine": 62,
+                    "endCol": 10,
+                    "msg": "Taking true branch",
+                    "fileId": 5370,
+                    "filePath": "crypto/evp/names.c"
+                },
+                {
+                    "startLine": 63,
+                    "startCol": 9,
+                    "endLine": 63,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5370,
+                    "filePath": "crypto/evp/names.c"
+                },
+                {
+                    "startLine": 67,
+                    "startCol": 1,
+                    "endLine": 67,
+                    "endCol": 1,
+                    "msg": "return from a call to EVP_get_cipherbyname",
+                    "fileId": 5370,
+                    "filePath": "crypto/evp/names.c"
+                },
+                {
+                    "startLine": 150,
+                    "startCol": 9,
+                    "endLine": 150,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5365,
+                    "filePath": "crypto/pkcs12/p12_sbag.c"
+                },
+                {
+                    "startLine": 153,
+                    "startCol": 5,
+                    "endLine": 153,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5365,
+                    "filePath": "crypto/pkcs12/p12_sbag.c"
+                },
+                {
+                    "startLine": 153,
+                    "startCol": 10,
+                    "endLine": 153,
+                    "endCol": 10,
+                    "msg": "pointer `pbe_ciph` last assigned on line 148 could be null and is dereferenced by call to `PKCS8_encrypt()` at line 153, column 10.",
+                    "fileId": 5365,
+                    "filePath": "crypto/pkcs12/p12_sbag.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 137,
+                    "startCol": 1,
+                    "endLine": 137,
+                    "endCol": 1,
+                    "fileId": 5365,
+                    "filePath": "crypto/pkcs12/p12_sbag.c"
+                },
+                {
+                    "startLine": 148,
+                    "startCol": 5,
+                    "endLine": 148,
+                    "endCol": 5,
+                    "fileId": 5365,
+                    "filePath": "crypto/pkcs12/p12_sbag.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "5416c98253668703b5af4cae3d801d51",
+        "checkedFile": "crypto/bn/bn_mul.c",
+        "checkerMsg": "The value written to &neg (type int) is never used.",
+        "reportId": 91613,
+        "fileId": 5382,
+        "line": 744,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 744,
+                    "startCol": 9,
+                    "endLine": 744,
+                    "endCol": 9,
+                    "msg": "Write of unused value",
+                    "fileId": 5382,
+                    "filePath": "crypto/bn/bn_mul.c"
+                },
+                {
+                    "startLine": 744,
+                    "startCol": 9,
+                    "endLine": 744,
+                    "endCol": 9,
+                    "msg": "The value written to &neg (type int) is never used.",
+                    "fileId": 5382,
+                    "filePath": "crypto/bn/bn_mul.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "e2d340a9db135a346f3c94da46f995b3",
+        "checkedFile": "crypto/bn/bn_mul.c",
+        "checkerMsg": "The value written to &zero (type int) is never used.",
+        "reportId": 91614,
+        "fileId": 5382,
+        "line": 707,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 707,
+                    "startCol": 9,
+                    "endLine": 707,
+                    "endCol": 9,
+                    "msg": "Write of unused value",
+                    "fileId": 5382,
+                    "filePath": "crypto/bn/bn_mul.c"
+                },
+                {
+                    "startLine": 707,
+                    "startCol": 9,
+                    "endLine": 707,
+                    "endCol": 9,
+                    "msg": "The value written to &zero (type int) is never used.",
+                    "fileId": 5382,
+                    "filePath": "crypto/bn/bn_mul.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "e2d340a9db135a346f3c94da46f995b3",
+        "checkedFile": "crypto/bn/bn_mul.c",
+        "checkerMsg": "The value written to &zero (type int) is never used.",
+        "reportId": 91615,
+        "fileId": 5382,
+        "line": 699,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 699,
+                    "startCol": 9,
+                    "endLine": 699,
+                    "endCol": 9,
+                    "msg": "Write of unused value",
+                    "fileId": 5382,
+                    "filePath": "crypto/bn/bn_mul.c"
+                },
+                {
+                    "startLine": 699,
+                    "startCol": 9,
+                    "endLine": 699,
+                    "endCol": 9,
+                    "msg": "The value written to &zero (type int) is never used.",
+                    "fileId": 5382,
+                    "filePath": "crypto/bn/bn_mul.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "e2d340a9db135a346f3c94da46f995b3",
+        "checkedFile": "crypto/bn/bn_mul.c",
+        "checkerMsg": "The value written to &zero (type int) is never used.",
+        "reportId": 91616,
+        "fileId": 5382,
+        "line": 689,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 689,
+                    "startCol": 9,
+                    "endLine": 689,
+                    "endCol": 9,
+                    "msg": "Write of unused value",
+                    "fileId": 5382,
+                    "filePath": "crypto/bn/bn_mul.c"
+                },
+                {
+                    "startLine": 689,
+                    "startCol": 9,
+                    "endLine": 689,
+                    "endCol": 9,
+                    "msg": "The value written to &zero (type int) is never used.",
+                    "fileId": 5382,
+                    "filePath": "crypto/bn/bn_mul.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "93416db289d636cbbfd94fe097573c0e",
+        "checkedFile": "test/ssltest_old.c",
+        "checkerMsg": "The value written to &ret (type int) is never used.",
+        "reportId": 91617,
+        "fileId": 5373,
+        "line": 2585,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2585,
+                    "startCol": 9,
+                    "endLine": 2585,
+                    "endCol": 9,
+                    "msg": "Write of unused value",
+                    "fileId": 5373,
+                    "filePath": "test/ssltest_old.c"
+                },
+                {
+                    "startLine": 2585,
+                    "startCol": 9,
+                    "endLine": 2585,
+                    "endCol": 9,
+                    "msg": "The value written to &ret (type int) is never used.",
+                    "fileId": 5373,
+                    "filePath": "test/ssltest_old.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "93416db289d636cbbfd94fe097573c0e",
+        "checkedFile": "test/ssltest_old.c",
+        "checkerMsg": "The value written to &ret (type int) is never used.",
+        "reportId": 91618,
+        "fileId": 5373,
+        "line": 2202,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2202,
+                    "startCol": 9,
+                    "endLine": 2202,
+                    "endCol": 9,
+                    "msg": "Write of unused value",
+                    "fileId": 5373,
+                    "filePath": "test/ssltest_old.c"
+                },
+                {
+                    "startLine": 2202,
+                    "startCol": 9,
+                    "endLine": 2202,
+                    "endCol": 9,
+                    "msg": "The value written to &ret (type int) is never used.",
+                    "fileId": 5373,
+                    "filePath": "test/ssltest_old.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "5c4305107630947047e864d0cd4da321",
+        "checkedFile": "crypto/asn1/asn_mime.c",
+        "checkerMsg": "The value written to &p (type char*) is never used.",
+        "reportId": 91619,
+        "fileId": 5376,
+        "line": 969,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 969,
+                    "startCol": 5,
+                    "endLine": 969,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5376,
+                    "filePath": "crypto/asn1/asn_mime.c"
+                },
+                {
+                    "startLine": 969,
+                    "startCol": 5,
+                    "endLine": 969,
+                    "endCol": 5,
+                    "msg": "The value written to &p (type char*) is never used.",
+                    "fileId": 5376,
+                    "filePath": "crypto/asn1/asn_mime.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "ee97b192a07054283d8158e4a23e594a",
+        "checkedFile": "crypto/asn1/a_gentm.c",
+        "checkerMsg": "The value written to &i (type int) is never used.",
+        "reportId": 91620,
+        "fileId": 5377,
+        "line": 41,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 41,
+                    "startCol": 13,
+                    "endLine": 41,
+                    "endCol": 13,
+                    "msg": "Write of unused value",
+                    "fileId": 5377,
+                    "filePath": "crypto/asn1/a_gentm.c"
+                },
+                {
+                    "startLine": 41,
+                    "startCol": 13,
+                    "endLine": 41,
+                    "endCol": 13,
+                    "msg": "The value written to &i (type int) is never used.",
+                    "fileId": 5377,
+                    "filePath": "crypto/asn1/a_gentm.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "6942f770e373c6309be3db11866901f0",
+        "checkedFile": "crypto/asn1/a_utctm.c",
+        "checkerMsg": "The value written to &i (type int) is never used.",
+        "reportId": 91621,
+        "fileId": 5378,
+        "line": 33,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 33,
+                    "startCol": 13,
+                    "endLine": 33,
+                    "endCol": 13,
+                    "msg": "Write of unused value",
+                    "fileId": 5378,
+                    "filePath": "crypto/asn1/a_utctm.c"
+                },
+                {
+                    "startLine": 33,
+                    "startCol": 13,
+                    "endLine": 33,
+                    "endCol": 13,
+                    "msg": "The value written to &i (type int) is never used.",
+                    "fileId": 5378,
+                    "filePath": "crypto/asn1/a_utctm.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "94ac5408f3314b15634b39ec665b46c3",
+        "checkedFile": "test/ssl_test_ctx_test.c",
+        "checkerMsg": "The value read from fixture.test_section was never initialized.",
+        "reportId": 91622,
+        "fileId": 5372,
+        "line": 195,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 195,
+                    "startCol": 5,
+                    "endLine": 195,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5372,
+                    "filePath": "test/ssl_test_ctx_test.c"
+                },
+                {
+                    "startLine": 195,
+                    "startCol": 5,
+                    "endLine": 195,
+                    "endCol": 5,
+                    "msg": "The value read from fixture.test_section was never initialized.",
+                    "fileId": 5372,
+                    "filePath": "test/ssl_test_ctx_test.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "78f76e26c2d49ca5bd6f8bd63da66ecd",
+        "checkedFile": "crypto/modes/ocb128.c",
+        "checkerMsg": "The value read from mask[_] was never initialized.",
+        "reportId": 91623,
+        "fileId": 5383,
+        "line": 58,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 58,
+                    "startCol": 13,
+                    "endLine": 58,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 5383,
+                    "filePath": "crypto/modes/ocb128.c"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 13,
+                    "endLine": 58,
+                    "endCol": 13,
+                    "msg": "The value read from mask[_] was never initialized.",
+                    "fileId": 5383,
+                    "filePath": "crypto/modes/ocb128.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "93846a10d7148e9a113941a588f4c574",
+        "checkedFile": "ssl/ssl_sess.c",
+        "checkerMsg": "The value written to &p (type unsigned char*) is never used.",
+        "reportId": 91624,
+        "fileId": 5363,
+        "line": 580,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 580,
+                    "startCol": 9,
+                    "endLine": 580,
+                    "endCol": 9,
+                    "msg": "Write of unused value",
+                    "fileId": 5363,
+                    "filePath": "ssl/ssl_sess.c"
+                },
+                {
+                    "startLine": 580,
+                    "startCol": 9,
+                    "endLine": 580,
+                    "endCol": 9,
+                    "msg": "The value written to &p (type unsigned char*) is never used.",
+                    "fileId": 5363,
+                    "filePath": "ssl/ssl_sess.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "f3e763fe3447a6b8dac015d4c464a453",
+        "checkedFile": "apps/speed.c",
+        "checkerMsg": "pointer `fds` last assigned on line 2901 could be null and is dereferenced at line 2911, column 13.",
+        "reportId": 91625,
+        "fileId": 5386,
+        "line": 2911,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 20,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2894,
+                    "startCol": 1,
+                    "endLine": 2894,
+                    "endCol": 1,
+                    "msg": "start of procedure do_multi()",
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                },
+                {
+                    "startLine": 2899,
+                    "startCol": 5,
+                    "endLine": 2899,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                },
+                {
+                    "startLine": 2901,
+                    "startCol": 5,
+                    "endLine": 2901,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                },
+                {
+                    "startLine": 2902,
+                    "startCol": 10,
+                    "endLine": 2902,
+                    "endCol": 10,
+                    "msg": "",
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                },
+                {
+                    "startLine": 2902,
+                    "startCol": 17,
+                    "endLine": 2902,
+                    "endCol": 17,
+                    "msg": "Loop condition is true. Entering loop body",
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                },
+                {
+                    "startLine": 2903,
+                    "startCol": 13,
+                    "endLine": 2903,
+                    "endCol": 13,
+                    "msg": "Taking false branch",
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                },
+                {
+                    "startLine": 2907,
+                    "startCol": 9,
+                    "endLine": 2907,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                },
+                {
+                    "startLine": 2908,
+                    "startCol": 15,
+                    "endLine": 2908,
+                    "endCol": 15,
+                    "msg": "",
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                },
+                {
+                    "startLine": 329,
+                    "startCol": 1,
+                    "endLine": 329,
+                    "endCol": 1,
+                    "msg": "start of procedure BIO_ctrl()",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 334,
+                    "startCol": 9,
+                    "endLine": 334,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 337,
+                    "startCol": 10,
+                    "endLine": 337,
+                    "endCol": 10,
+                    "msg": "Taking false branch",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 337,
+                    "startCol": 33,
+                    "endLine": 337,
+                    "endCol": 33,
+                    "msg": "Taking true branch",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 338,
+                    "startCol": 9,
+                    "endLine": 338,
+                    "endCol": 9,
+                    "msg": "Skipping ERR_put_error(): empty list of specs",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 339,
+                    "startCol": 9,
+                    "endLine": 339,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 353,
+                    "startCol": 1,
+                    "endLine": 353,
+                    "endCol": 1,
+                    "msg": "return from a call to BIO_ctrl",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 2908,
+                    "startCol": 9,
+                    "endLine": 2908,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                },
+                {
+                    "startLine": 2909,
+                    "startCol": 13,
+                    "endLine": 2909,
+                    "endCol": 13,
+                    "msg": "Taking true branch",
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                },
+                {
+                    "startLine": 2910,
+                    "startCol": 13,
+                    "endLine": 2910,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                },
+                {
+                    "startLine": 2911,
+                    "startCol": 13,
+                    "endLine": 2911,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                },
+                {
+                    "startLine": 2911,
+                    "startCol": 13,
+                    "endLine": 2911,
+                    "endCol": 13,
+                    "msg": "pointer `fds` last assigned on line 2901 could be null and is dereferenced at line 2911, column 13.",
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 2894,
+                    "startCol": 1,
+                    "endLine": 2894,
+                    "endCol": 1,
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                },
+                {
+                    "startLine": 2899,
+                    "startCol": 5,
+                    "endLine": 2899,
+                    "endCol": 5,
+                    "fileId": 5386,
+                    "filePath": "apps/speed.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "67ebfea16daa898ad0ef1e2c009bb701",
+        "checkedFile": "test/evp_test.c",
+        "checkerMsg": "pointer `edata` last assigned on line 1844 could be null and is dereferenced at line 1851, column 9.",
+        "reportId": 91626,
+        "fileId": 5380,
+        "line": 1851,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 18,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1842,
+                    "startCol": 1,
+                    "endLine": 1842,
+                    "endCol": 1,
+                    "msg": "start of procedure encode_test_init()",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1844,
+                    "startCol": 5,
+                    "endLine": 1844,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 105,
+                    "startCol": 1,
+                    "endLine": 105,
+                    "endCol": 1,
+                    "msg": "start of procedure CRYPTO_zalloc()",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 107,
+                    "startCol": 5,
+                    "endLine": 107,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 71,
+                    "startCol": 1,
+                    "endLine": 71,
+                    "endCol": 1,
+                    "msg": "start of procedure CRYPTO_malloc()",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 73,
+                    "startCol": 5,
+                    "endLine": 73,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 75,
+                    "startCol": 9,
+                    "endLine": 75,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 75,
+                    "startCol": 32,
+                    "endLine": 75,
+                    "endCol": 32,
+                    "msg": "Taking true branch",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 76,
+                    "startCol": 9,
+                    "endLine": 76,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 103,
+                    "startCol": 1,
+                    "endLine": 103,
+                    "endCol": 1,
+                    "msg": "return from a call to CRYPTO_malloc",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 109,
+                    "startCol": 9,
+                    "endLine": 109,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 111,
+                    "startCol": 5,
+                    "endLine": 111,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 112,
+                    "startCol": 1,
+                    "endLine": 112,
+                    "endCol": 1,
+                    "msg": "return from a call to CRYPTO_zalloc",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 1846,
+                    "startCol": 9,
+                    "endLine": 1846,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1848,
+                    "startCol": 16,
+                    "endLine": 1848,
+                    "endCol": 16,
+                    "msg": "Taking false branch",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1850,
+                    "startCol": 16,
+                    "endLine": 1850,
+                    "endCol": 16,
+                    "msg": "Taking true branch",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1851,
+                    "startCol": 9,
+                    "endLine": 1851,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1851,
+                    "startCol": 9,
+                    "endLine": 1851,
+                    "endCol": 9,
+                    "msg": "pointer `edata` last assigned on line 1844 could be null and is dereferenced at line 1851, column 9.",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 1842,
+                    "startCol": 1,
+                    "endLine": 1842,
+                    "endCol": 1,
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1844,
+                    "startCol": 5,
+                    "endLine": 1844,
+                    "endCol": 5,
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "22b1a95e8ddc7f6c764a1559bb5d468d",
+        "checkedFile": "test/evp_test.c",
+        "checkerMsg": "pointer `edata` last assigned on line 1844 could be null and is dereferenced at line 1849, column 9.",
+        "reportId": 91627,
+        "fileId": 5380,
+        "line": 1849,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 17,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1842,
+                    "startCol": 1,
+                    "endLine": 1842,
+                    "endCol": 1,
+                    "msg": "start of procedure encode_test_init()",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1844,
+                    "startCol": 5,
+                    "endLine": 1844,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 105,
+                    "startCol": 1,
+                    "endLine": 105,
+                    "endCol": 1,
+                    "msg": "start of procedure CRYPTO_zalloc()",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 107,
+                    "startCol": 5,
+                    "endLine": 107,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 71,
+                    "startCol": 1,
+                    "endLine": 71,
+                    "endCol": 1,
+                    "msg": "start of procedure CRYPTO_malloc()",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 73,
+                    "startCol": 5,
+                    "endLine": 73,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 75,
+                    "startCol": 9,
+                    "endLine": 75,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 75,
+                    "startCol": 32,
+                    "endLine": 75,
+                    "endCol": 32,
+                    "msg": "Taking true branch",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 76,
+                    "startCol": 9,
+                    "endLine": 76,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 103,
+                    "startCol": 1,
+                    "endLine": 103,
+                    "endCol": 1,
+                    "msg": "return from a call to CRYPTO_malloc",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 109,
+                    "startCol": 9,
+                    "endLine": 109,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 111,
+                    "startCol": 5,
+                    "endLine": 111,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 112,
+                    "startCol": 1,
+                    "endLine": 112,
+                    "endCol": 1,
+                    "msg": "return from a call to CRYPTO_zalloc",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 1846,
+                    "startCol": 9,
+                    "endLine": 1846,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1848,
+                    "startCol": 16,
+                    "endLine": 1848,
+                    "endCol": 16,
+                    "msg": "Taking true branch",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1849,
+                    "startCol": 9,
+                    "endLine": 1849,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1849,
+                    "startCol": 9,
+                    "endLine": 1849,
+                    "endCol": 9,
+                    "msg": "pointer `edata` last assigned on line 1844 could be null and is dereferenced at line 1849, column 9.",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 1842,
+                    "startCol": 1,
+                    "endLine": 1842,
+                    "endCol": 1,
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1844,
+                    "startCol": 5,
+                    "endLine": 1844,
+                    "endCol": 5,
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "ed7dc77ac03930a1af489a9a772198fa",
+        "checkedFile": "test/evp_test.c",
+        "checkerMsg": "pointer `edata` last assigned on line 1844 could be null and is dereferenced at line 1847, column 9.",
+        "reportId": 91628,
+        "fileId": 5380,
+        "line": 1847,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 16,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1842,
+                    "startCol": 1,
+                    "endLine": 1842,
+                    "endCol": 1,
+                    "msg": "start of procedure encode_test_init()",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1844,
+                    "startCol": 5,
+                    "endLine": 1844,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 105,
+                    "startCol": 1,
+                    "endLine": 105,
+                    "endCol": 1,
+                    "msg": "start of procedure CRYPTO_zalloc()",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 107,
+                    "startCol": 5,
+                    "endLine": 107,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 71,
+                    "startCol": 1,
+                    "endLine": 71,
+                    "endCol": 1,
+                    "msg": "start of procedure CRYPTO_malloc()",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 73,
+                    "startCol": 5,
+                    "endLine": 73,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 75,
+                    "startCol": 9,
+                    "endLine": 75,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 75,
+                    "startCol": 32,
+                    "endLine": 75,
+                    "endCol": 32,
+                    "msg": "Taking true branch",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 76,
+                    "startCol": 9,
+                    "endLine": 76,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 103,
+                    "startCol": 1,
+                    "endLine": 103,
+                    "endCol": 1,
+                    "msg": "return from a call to CRYPTO_malloc",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 109,
+                    "startCol": 9,
+                    "endLine": 109,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 111,
+                    "startCol": 5,
+                    "endLine": 111,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 112,
+                    "startCol": 1,
+                    "endLine": 112,
+                    "endCol": 1,
+                    "msg": "return from a call to CRYPTO_zalloc",
+                    "fileId": 5381,
+                    "filePath": "crypto/mem.c"
+                },
+                {
+                    "startLine": 1846,
+                    "startCol": 9,
+                    "endLine": 1846,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1847,
+                    "startCol": 9,
+                    "endLine": 1847,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1847,
+                    "startCol": 9,
+                    "endLine": 1847,
+                    "endCol": 9,
+                    "msg": "pointer `edata` last assigned on line 1844 could be null and is dereferenced at line 1847, column 9.",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 1842,
+                    "startCol": 1,
+                    "endLine": 1842,
+                    "endCol": 1,
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1844,
+                    "startCol": 5,
+                    "endLine": 1844,
+                    "endCol": 5,
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "44fe5bee71e973a30fb9f27dd964d29b",
+        "checkedFile": "test/evp_test.c",
+        "checkerMsg": "The value written to &err (type char*) is never used.",
+        "reportId": 91629,
+        "fileId": 5380,
+        "line": 2016,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2016,
+                    "startCol": 5,
+                    "endLine": 2016,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 2016,
+                    "startCol": 5,
+                    "endLine": 2016,
+                    "endCol": 5,
+                    "msg": "The value written to &err (type char*) is never used.",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "44fe5bee71e973a30fb9f27dd964d29b",
+        "checkedFile": "test/evp_test.c",
+        "checkerMsg": "The value written to &err (type char*) is never used.",
+        "reportId": 91630,
+        "fileId": 5380,
+        "line": 1264,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1264,
+                    "startCol": 5,
+                    "endLine": 1264,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 1264,
+                    "startCol": 5,
+                    "endLine": 1264,
+                    "endCol": 5,
+                    "msg": "The value written to &err (type char*) is never used.",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "01418eb8fd85d1e1bc9a12eae6fb49f5",
+        "checkedFile": "test/evp_test.c",
+        "checkerMsg": "The value written to &cdat (type cipher_data*) is never used.",
+        "reportId": 91631,
+        "fileId": 5380,
+        "line": 833,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 833,
+                    "startCol": 5,
+                    "endLine": 833,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                },
+                {
+                    "startLine": 833,
+                    "startCol": 5,
+                    "endLine": 833,
+                    "endCol": 5,
+                    "msg": "The value written to &cdat (type cipher_data*) is never used.",
+                    "fileId": 5380,
+                    "filePath": "test/evp_test.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "ab5668fd72ff1a985a64bcaac6850b94",
+        "checkedFile": "ssl/t1_lib.c",
+        "checkerMsg": "pointer `cpk` last assigned on line 4134 could be null and is dereferenced at line 4135, column 45.",
+        "reportId": 91632,
+        "fileId": 5353,
+        "line": 4135,
+        "column": 45,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 31,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 4123,
+                    "startCol": 1,
+                    "endLine": 4123,
+                    "endCol": 1,
+                    "msg": "start of procedure ssl_get_auto_dh()",
+                    "fileId": 5353,
+                    "filePath": "ssl/t1_lib.c"
+                },
+                {
+                    "startLine": 4125,
+                    "startCol": 5,
+                    "endLine": 4125,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5353,
+                    "filePath": "ssl/t1_lib.c"
+                },
+                {
+                    "startLine": 4126,
+                    "startCol": 9,
+                    "endLine": 4126,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5353,
+                    "filePath": "ssl/t1_lib.c"
+                },
+                {
+                    "startLine": 4128,
+                    "startCol": 9,
+                    "endLine": 4128,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5353,
+                    "filePath": "ssl/t1_lib.c"
+                },
+                {
+                    "startLine": 4134,
+                    "startCol": 9,
+                    "endLine": 4134,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5353,
+                    "filePath": "ssl/t1_lib.c"
+                },
+                {
+                    "startLine": 2964,
+                    "startCol": 1,
+                    "endLine": 2964,
+                    "endCol": 1,
+                    "msg": "start of procedure ssl_get_server_send_pkey()",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2969,
+                    "startCol": 5,
+                    "endLine": 2969,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2970,
+                    "startCol": 10,
+                    "endLine": 2970,
+                    "endCol": 10,
+                    "msg": "Taking false branch",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2970,
+                    "startCol": 20,
+                    "endLine": 2970,
+                    "endCol": 20,
+                    "msg": "Taking false branch",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2972,
+                    "startCol": 5,
+                    "endLine": 2972,
+                    "endCol": 5,
+                    "msg": "Skipping ssl_set_masks(): empty list of specs",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2974,
+                    "startCol": 5,
+                    "endLine": 2974,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2943,
+                    "startCol": 1,
+                    "endLine": 2943,
+                    "endCol": 1,
+                    "msg": "start of procedure ssl_get_server_cert_index()",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2946,
+                    "startCol": 5,
+                    "endLine": 2946,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 1884,
+                    "startCol": 1,
+                    "endLine": 1884,
+                    "endCol": 1,
+                    "msg": "start of procedure ssl_cipher_get_cert_index()",
+                    "fileId": 5355,
+                    "filePath": "ssl/ssl_ciph.c"
+                },
+                {
+                    "startLine": 1888,
+                    "startCol": 5,
+                    "endLine": 1888,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5355,
+                    "filePath": "ssl/ssl_ciph.c"
+                },
+                {
+                    "startLine": 1890,
+                    "startCol": 9,
+                    "endLine": 1890,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5355,
+                    "filePath": "ssl/ssl_ciph.c"
+                },
+                {
+                    "startLine": 1892,
+                    "startCol": 14,
+                    "endLine": 1892,
+                    "endCol": 14,
+                    "msg": "Taking false branch",
+                    "fileId": 5355,
+                    "filePath": "ssl/ssl_ciph.c"
+                },
+                {
+                    "startLine": 1894,
+                    "startCol": 14,
+                    "endLine": 1894,
+                    "endCol": 14,
+                    "msg": "Taking true branch",
+                    "fileId": 5355,
+                    "filePath": "ssl/ssl_ciph.c"
+                },
+                {
+                    "startLine": 1895,
+                    "startCol": 9,
+                    "endLine": 1895,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5355,
+                    "filePath": "ssl/ssl_ciph.c"
+                },
+                {
+                    "startLine": 1902,
+                    "startCol": 1,
+                    "endLine": 1902,
+                    "endCol": 1,
+                    "msg": "return from a call to ssl_cipher_get_cert_index",
+                    "fileId": 5355,
+                    "filePath": "ssl/ssl_ciph.c"
+                },
+                {
+                    "startLine": 2947,
+                    "startCol": 9,
+                    "endLine": 2947,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2947,
+                    "startCol": 37,
+                    "endLine": 2947,
+                    "endCol": 37,
+                    "msg": "Taking false branch",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2949,
+                    "startCol": 9,
+                    "endLine": 2949,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2959,
+                    "startCol": 9,
+                    "endLine": 2959,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2961,
+                    "startCol": 5,
+                    "endLine": 2961,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2962,
+                    "startCol": 1,
+                    "endLine": 2962,
+                    "endCol": 1,
+                    "msg": "return from a call to ssl_get_server_cert_index",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2977,
+                    "startCol": 9,
+                    "endLine": 2977,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2978,
+                    "startCol": 9,
+                    "endLine": 2978,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 2982,
+                    "startCol": 1,
+                    "endLine": 2982,
+                    "endCol": 1,
+                    "msg": "return from a call to ssl_get_server_send_pkey",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 4135,
+                    "startCol": 9,
+                    "endLine": 4135,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5353,
+                    "filePath": "ssl/t1_lib.c"
+                },
+                {
+                    "startLine": 4135,
+                    "startCol": 45,
+                    "endLine": 4135,
+                    "endCol": 45,
+                    "msg": "pointer `cpk` last assigned on line 4134 could be null and is dereferenced at line 4135, column 45.",
+                    "fileId": 5353,
+                    "filePath": "ssl/t1_lib.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 4123,
+                    "startCol": 1,
+                    "endLine": 4123,
+                    "endCol": 1,
+                    "fileId": 5353,
+                    "filePath": "ssl/t1_lib.c"
+                },
+                {
+                    "startLine": 4125,
+                    "startCol": 5,
+                    "endLine": 4125,
+                    "endCol": 5,
+                    "fileId": 5353,
+                    "filePath": "ssl/t1_lib.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "8f68bec93876c77eb0795ecf38e49afe",
+        "checkedFile": "ssl/t1_lib.c",
+        "checkerMsg": "The value written to &dh_secbits (type int) is never used.",
+        "reportId": 91633,
+        "fileId": 5353,
+        "line": 4125,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 4125,
+                    "startCol": 5,
+                    "endLine": 4125,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5353,
+                    "filePath": "ssl/t1_lib.c"
+                },
+                {
+                    "startLine": 4125,
+                    "startCol": 5,
+                    "endLine": 4125,
+                    "endCol": 5,
+                    "msg": "The value written to &dh_secbits (type int) is never used.",
+                    "fileId": 5353,
+                    "filePath": "ssl/t1_lib.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "774bae2ada4e5304928a0bef85abd266",
+        "checkedFile": "ssl/t1_lib.c",
+        "checkerMsg": "The value written to &ret (type int) is never used.",
+        "reportId": 91634,
+        "fileId": 5353,
+        "line": 2869,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2869,
+                    "startCol": 5,
+                    "endLine": 2869,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5353,
+                    "filePath": "ssl/t1_lib.c"
+                },
+                {
+                    "startLine": 2869,
+                    "startCol": 5,
+                    "endLine": 2869,
+                    "endCol": 5,
+                    "msg": "The value written to &ret (type int) is never used.",
+                    "fileId": 5353,
+                    "filePath": "ssl/t1_lib.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "f14124d73f382f07f55775bf6f7d382d",
+        "checkedFile": "test/srptest.c",
+        "checkerMsg": "The value written to &ret (type int) is never used.",
+        "reportId": 91635,
+        "fileId": 5360,
+        "line": 40,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 40,
+                    "startCol": 5,
+                    "endLine": 40,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5360,
+                    "filePath": "test/srptest.c"
+                },
+                {
+                    "startLine": 40,
+                    "startCol": 5,
+                    "endLine": 40,
+                    "endCol": 5,
+                    "msg": "The value written to &ret (type int) is never used.",
+                    "fileId": 5360,
+                    "filePath": "test/srptest.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "4a86d87427d4dcdec8bc29f435f5da5c",
+        "checkedFile": "ssl/record/rec_layer_s3.c",
+        "checkerMsg": "The value read from plen[_] was never initialized.",
+        "reportId": 91636,
+        "fileId": 5359,
+        "line": 839,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 839,
+                    "startCol": 9,
+                    "endLine": 839,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5359,
+                    "filePath": "ssl/record/rec_layer_s3.c"
+                },
+                {
+                    "startLine": 839,
+                    "startCol": 9,
+                    "endLine": 839,
+                    "endCol": 9,
+                    "msg": "The value read from plen[_] was never initialized.",
+                    "fileId": 5359,
+                    "filePath": "ssl/record/rec_layer_s3.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "88bed85ea650a54e497aec09ba4116e6",
+        "checkedFile": "ssl/record/rec_layer_s3.c",
+        "checkerMsg": "The value read from outbuf[_] was never initialized.",
+        "reportId": 91637,
+        "fileId": 5359,
+        "line": 763,
+        "column": 11,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 763,
+                    "startCol": 11,
+                    "endLine": 763,
+                    "endCol": 11,
+                    "msg": "",
+                    "fileId": 5359,
+                    "filePath": "ssl/record/rec_layer_s3.c"
+                },
+                {
+                    "startLine": 763,
+                    "startCol": 11,
+                    "endLine": 763,
+                    "endCol": 11,
+                    "msg": "The value read from outbuf[_] was never initialized.",
+                    "fileId": 5359,
+                    "filePath": "ssl/record/rec_layer_s3.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "7bf851db2d44218fab4d0c77b66d391d",
+        "checkedFile": "crypto/asn1/a_verify.c",
+        "checkerMsg": "The value written to &ret (type int) is never used.",
+        "reportId": 91638,
+        "fileId": 5352,
+        "line": 167,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 167,
+                    "startCol": 5,
+                    "endLine": 167,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5352,
+                    "filePath": "crypto/asn1/a_verify.c"
+                },
+                {
+                    "startLine": 167,
+                    "startCol": 5,
+                    "endLine": 167,
+                    "endCol": 5,
+                    "msg": "The value written to &ret (type int) is never used.",
+                    "fileId": 5352,
+                    "filePath": "crypto/asn1/a_verify.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "f5b800188988a767f18243234590f1a6",
+        "checkedFile": "crypto/pem/pem_lib.c",
+        "checkerMsg": "The value written to &i (type int) is never used.",
+        "reportId": 91639,
+        "fileId": 5371,
+        "line": 779,
+        "column": 21,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 779,
+                    "startCol": 21,
+                    "endLine": 779,
+                    "endCol": 21,
+                    "msg": "Write of unused value",
+                    "fileId": 5371,
+                    "filePath": "crypto/pem/pem_lib.c"
+                },
+                {
+                    "startLine": 779,
+                    "startCol": 21,
+                    "endLine": 779,
+                    "endCol": 21,
+                    "msg": "The value written to &i (type int) is never used.",
+                    "fileId": 5371,
+                    "filePath": "crypto/pem/pem_lib.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "f5b800188988a767f18243234590f1a6",
+        "checkedFile": "crypto/pem/pem_lib.c",
+        "checkerMsg": "The value written to &i (type int) is never used.",
+        "reportId": 91640,
+        "fileId": 5371,
+        "line": 693,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 693,
+                    "startCol": 13,
+                    "endLine": 693,
+                    "endCol": 13,
+                    "msg": "Write of unused value",
+                    "fileId": 5371,
+                    "filePath": "crypto/pem/pem_lib.c"
+                },
+                {
+                    "startLine": 693,
+                    "startCol": 13,
+                    "endLine": 693,
+                    "endCol": 13,
+                    "msg": "The value written to &i (type int) is never used.",
+                    "fileId": 5371,
+                    "filePath": "crypto/pem/pem_lib.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "c20f617ef31684b035e3e19fedfd32b1",
+        "checkedFile": "ssl/statem/statem_srvr.c",
+        "checkerMsg": "The value read from al was never initialized.",
+        "reportId": 91641,
+        "fileId": 5362,
+        "line": 2843,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2843,
+                    "startCol": 9,
+                    "endLine": 2843,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                },
+                {
+                    "startLine": 2843,
+                    "startCol": 9,
+                    "endLine": 2843,
+                    "endCol": 9,
+                    "msg": "The value read from al was never initialized.",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "30745c1b14b0da590c8e455a301413ca",
+        "checkedFile": "ssl/statem/statem_srvr.c",
+        "checkerMsg": "The value read from nr[_] was never initialized.",
+        "reportId": 91642,
+        "fileId": 5362,
+        "line": 1892,
+        "column": 9,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1892,
+                    "startCol": 9,
+                    "endLine": 1892,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                },
+                {
+                    "startLine": 1892,
+                    "startCol": 9,
+                    "endLine": 1892,
+                    "endCol": 9,
+                    "msg": "The value read from nr[_] was never initialized.",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "545abf91d825cc2ba6cb5e6d4fb9bc0a",
+        "checkedFile": "ssl/statem/statem_srvr.c",
+        "checkerMsg": "The value read from nr[_] was never initialized.",
+        "reportId": 91643,
+        "fileId": 5362,
+        "line": 1890,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1890,
+                    "startCol": 13,
+                    "endLine": 1890,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                },
+                {
+                    "startLine": 1890,
+                    "startCol": 13,
+                    "endLine": 1890,
+                    "endCol": 13,
+                    "msg": "The value read from nr[_] was never initialized.",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "5665f8882085ae72d1d504c05ff1eeda",
+        "checkedFile": "ssl/statem/statem_srvr.c",
+        "checkerMsg": "The value read from nr[_] was never initialized.",
+        "reportId": 91644,
+        "fileId": 5362,
+        "line": 1884,
+        "column": 25,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1884,
+                    "startCol": 25,
+                    "endLine": 1884,
+                    "endCol": 25,
+                    "msg": "",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                },
+                {
+                    "startLine": 1884,
+                    "startCol": 25,
+                    "endLine": 1884,
+                    "endCol": 25,
+                    "msg": "The value read from nr[_] was never initialized.",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "a5f5ffa8a77aa543f679d4abc0900672",
+        "checkedFile": "ssl/statem/statem_srvr.c",
+        "checkerMsg": "The value read from nr[_] was never initialized.",
+        "reportId": 91645,
+        "fileId": 5362,
+        "line": 1883,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1883,
+                    "startCol": 13,
+                    "endLine": 1883,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                },
+                {
+                    "startLine": 1883,
+                    "startCol": 13,
+                    "endLine": 1883,
+                    "endCol": 13,
+                    "msg": "The value read from nr[_] was never initialized.",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "UNINITIALIZED_VALUE",
+        "bugHash": "66ce32755fbe9aa6d17d8e7e211536ed",
+        "checkedFile": "ssl/statem/statem_srvr.c",
+        "checkerMsg": "The value read from nr[_] was never initialized.",
+        "reportId": 91646,
+        "fileId": 5362,
+        "line": 1872,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1872,
+                    "startCol": 13,
+                    "endLine": 1872,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                },
+                {
+                    "startLine": 1872,
+                    "startCol": 13,
+                    "endLine": 1872,
+                    "endCol": 13,
+                    "msg": "The value read from nr[_] was never initialized.",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "caadcca788267df39349593e2c04ceed",
+        "checkedFile": "ssl/statem/statem_srvr.c",
+        "checkerMsg": "The value written to &p (type unsigned char*) is never used.",
+        "reportId": 91647,
+        "fileId": 5362,
+        "line": 2024,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 2024,
+                    "startCol": 5,
+                    "endLine": 2024,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                },
+                {
+                    "startLine": 2024,
+                    "startCol": 5,
+                    "endLine": 2024,
+                    "endCol": 5,
+                    "msg": "The value written to &p (type unsigned char*) is never used.",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "d8c0f06ea1b6055992a07012d3365bb3",
+        "checkedFile": "ssl/statem/statem_srvr.c",
+        "checkerMsg": "The value written to &al (type int) is never used.",
+        "reportId": 91648,
+        "fileId": 5362,
+        "line": 1717,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 1717,
+                    "startCol": 13,
+                    "endLine": 1717,
+                    "endCol": 13,
+                    "msg": "Write of unused value",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                },
+                {
+                    "startLine": 1717,
+                    "startCol": 13,
+                    "endLine": 1717,
+                    "endCol": 13,
+                    "msg": "The value written to &al (type int) is never used.",
+                    "fileId": 5362,
+                    "filePath": "ssl/statem/statem_srvr.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "c48041b472bee4ac19472d4e666edadf",
+        "checkedFile": "crypto/srp/srp_vfy.c",
+        "checkerMsg": "The value written to &dst (type char*) is never used.",
+        "reportId": 91649,
+        "fileId": 5379,
+        "line": 140,
+        "column": 6,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 140,
+                    "startCol": 6,
+                    "endLine": 140,
+                    "endCol": 6,
+                    "msg": "Write of unused value",
+                    "fileId": 5379,
+                    "filePath": "crypto/srp/srp_vfy.c"
+                },
+                {
+                    "startLine": 140,
+                    "startCol": 6,
+                    "endLine": 140,
+                    "endCol": 6,
+                    "msg": "The value written to &dst (type char*) is never used.",
+                    "fileId": 5379,
+                    "filePath": "crypto/srp/srp_vfy.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "51fced6518eba0d675af0f2a21b8d494",
+        "checkedFile": "crypto/x509/x509_lu.c",
+        "checkerMsg": "pointer `&obj` last assigned on line 619 could be null and is dereferenced by call to `x509_object_cmp()` at line 620, column 13.",
+        "reportId": 91650,
+        "fileId": 5356,
+        "line": 620,
+        "column": 13,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 42,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 608,
+                    "startCol": 1,
+                    "endLine": 608,
+                    "endCol": 1,
+                    "msg": "start of procedure X509_OBJECT_retrieve_match()",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 613,
+                    "startCol": 5,
+                    "endLine": 613,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 1,
+                    "endLine": 58,
+                    "endCol": 1,
+                    "msg": "start of procedure sk_X509_OBJECT_find()",
+                    "fileId": 5357,
+                    "filePath": "include/openssl/x509_vfy.h"
+                },
+                {
+                    "startLine": 209,
+                    "startCol": 1,
+                    "endLine": 209,
+                    "endCol": 1,
+                    "msg": "start of procedure OPENSSL_sk_find()",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 211,
+                    "startCol": 5,
+                    "endLine": 211,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 184,
+                    "startCol": 1,
+                    "endLine": 184,
+                    "endCol": 1,
+                    "msg": "start of procedure internal_find()",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 190,
+                    "startCol": 9,
+                    "endLine": 190,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 193,
+                    "startCol": 9,
+                    "endLine": 193,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 194,
+                    "startCol": 14,
+                    "endLine": 194,
+                    "endCol": 14,
+                    "msg": "",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 194,
+                    "startCol": 21,
+                    "endLine": 194,
+                    "endCol": 21,
+                    "msg": "Loop condition is true. Entering loop body",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 195,
+                    "startCol": 17,
+                    "endLine": 195,
+                    "endCol": 17,
+                    "msg": "Taking false branch",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 194,
+                    "startCol": 34,
+                    "endLine": 194,
+                    "endCol": 34,
+                    "msg": "",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 194,
+                    "startCol": 21,
+                    "endLine": 194,
+                    "endCol": 21,
+                    "msg": "Loop condition is true. Entering loop body",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 195,
+                    "startCol": 17,
+                    "endLine": 195,
+                    "endCol": 17,
+                    "msg": "Taking true branch",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 196,
+                    "startCol": 17,
+                    "endLine": 196,
+                    "endCol": 17,
+                    "msg": "",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 207,
+                    "startCol": 1,
+                    "endLine": 207,
+                    "endCol": 1,
+                    "msg": "return from a call to internal_find",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 211,
+                    "startCol": 5,
+                    "endLine": 211,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 212,
+                    "startCol": 1,
+                    "endLine": 212,
+                    "endCol": 1,
+                    "msg": "return from a call to OPENSSL_sk_find",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 1,
+                    "endLine": 58,
+                    "endCol": 1,
+                    "msg": "return from a call to sk_X509_OBJECT_find",
+                    "fileId": 5357,
+                    "filePath": "include/openssl/x509_vfy.h"
+                },
+                {
+                    "startLine": 614,
+                    "startCol": 9,
+                    "endLine": 614,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 616,
+                    "startCol": 10,
+                    "endLine": 616,
+                    "endCol": 10,
+                    "msg": "Taking false branch",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 618,
+                    "startCol": 10,
+                    "endLine": 618,
+                    "endCol": 10,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 618,
+                    "startCol": 19,
+                    "endLine": 618,
+                    "endCol": 19,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 1,
+                    "endLine": 58,
+                    "endCol": 1,
+                    "msg": "start of procedure sk_X509_OBJECT_num()",
+                    "fileId": 5357,
+                    "filePath": "include/openssl/x509_vfy.h"
+                },
+                {
+                    "startLine": 277,
+                    "startCol": 1,
+                    "endLine": 277,
+                    "endCol": 1,
+                    "msg": "start of procedure OPENSSL_sk_num()",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 279,
+                    "startCol": 9,
+                    "endLine": 279,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 281,
+                    "startCol": 5,
+                    "endLine": 281,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 282,
+                    "startCol": 1,
+                    "endLine": 282,
+                    "endCol": 1,
+                    "msg": "return from a call to OPENSSL_sk_num",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 1,
+                    "endLine": 58,
+                    "endCol": 1,
+                    "msg": "return from a call to sk_X509_OBJECT_num",
+                    "fileId": 5357,
+                    "filePath": "include/openssl/x509_vfy.h"
+                },
+                {
+                    "startLine": 618,
+                    "startCol": 19,
+                    "endLine": 618,
+                    "endCol": 19,
+                    "msg": "Loop condition is true. Entering loop body",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 619,
+                    "startCol": 9,
+                    "endLine": 619,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 1,
+                    "endLine": 58,
+                    "endCol": 1,
+                    "msg": "start of procedure sk_X509_OBJECT_value()",
+                    "fileId": 5357,
+                    "filePath": "include/openssl/x509_vfy.h"
+                },
+                {
+                    "startLine": 284,
+                    "startCol": 1,
+                    "endLine": 284,
+                    "endCol": 1,
+                    "msg": "start of procedure OPENSSL_sk_value()",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 286,
+                    "startCol": 9,
+                    "endLine": 286,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 286,
+                    "startCol": 23,
+                    "endLine": 286,
+                    "endCol": 23,
+                    "msg": "Taking true branch",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 287,
+                    "startCol": 9,
+                    "endLine": 287,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 289,
+                    "startCol": 1,
+                    "endLine": 289,
+                    "endCol": 1,
+                    "msg": "return from a call to OPENSSL_sk_value",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 1,
+                    "endLine": 58,
+                    "endCol": 1,
+                    "msg": "return from a call to sk_X509_OBJECT_value",
+                    "fileId": 5357,
+                    "filePath": "include/openssl/x509_vfy.h"
+                },
+                {
+                    "startLine": 620,
+                    "startCol": 13,
+                    "endLine": 620,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 137,
+                    "startCol": 1,
+                    "endLine": 137,
+                    "endCol": 1,
+                    "msg": "start of procedure x509_object_cmp()",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 142,
+                    "startCol": 5,
+                    "endLine": 142,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 620,
+                    "startCol": 13,
+                    "endLine": 620,
+                    "endCol": 13,
+                    "msg": "pointer `&obj` last assigned on line 619 could be null and is dereferenced by call to `x509_object_cmp()` at line 620, column 13.",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 608,
+                    "startCol": 1,
+                    "endLine": 608,
+                    "endCol": 1,
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 613,
+                    "startCol": 5,
+                    "endLine": 613,
+                    "endCol": 5,
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "c72b0f42a85f4aeda2857cc915dac589",
+        "checkedFile": "crypto/x509/x509_lu.c",
+        "checkerMsg": "pointer `&tobj` last assigned on line 486 could be null and is dereferenced by call to `x509_object_cmp()` at line 487, column 17.",
+        "reportId": 91651,
+        "fileId": 5356,
+        "line": 487,
+        "column": 17,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 49,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 456,
+                    "startCol": 1,
+                    "endLine": 456,
+                    "endCol": 1,
+                    "msg": "start of procedure x509_object_idx_cnt()",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 464,
+                    "startCol": 5,
+                    "endLine": 464,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 465,
+                    "startCol": 5,
+                    "endLine": 465,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 466,
+                    "startCol": 5,
+                    "endLine": 466,
+                    "endCol": 5,
+                    "msg": "Switch condition is true. Entering switch case",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 467,
+                    "startCol": 9,
+                    "endLine": 467,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 468,
+                    "startCol": 9,
+                    "endLine": 468,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 479,
+                    "startCol": 5,
+                    "endLine": 479,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 1,
+                    "endLine": 58,
+                    "endCol": 1,
+                    "msg": "start of procedure sk_X509_OBJECT_find()",
+                    "fileId": 5357,
+                    "filePath": "include/openssl/x509_vfy.h"
+                },
+                {
+                    "startLine": 209,
+                    "startCol": 1,
+                    "endLine": 209,
+                    "endCol": 1,
+                    "msg": "start of procedure OPENSSL_sk_find()",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 211,
+                    "startCol": 5,
+                    "endLine": 211,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 184,
+                    "startCol": 1,
+                    "endLine": 184,
+                    "endCol": 1,
+                    "msg": "start of procedure internal_find()",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 190,
+                    "startCol": 9,
+                    "endLine": 190,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 193,
+                    "startCol": 9,
+                    "endLine": 193,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 194,
+                    "startCol": 14,
+                    "endLine": 194,
+                    "endCol": 14,
+                    "msg": "",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 194,
+                    "startCol": 21,
+                    "endLine": 194,
+                    "endCol": 21,
+                    "msg": "Loop condition is true. Entering loop body",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 195,
+                    "startCol": 17,
+                    "endLine": 195,
+                    "endCol": 17,
+                    "msg": "Taking false branch",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 194,
+                    "startCol": 34,
+                    "endLine": 194,
+                    "endCol": 34,
+                    "msg": "",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 194,
+                    "startCol": 21,
+                    "endLine": 194,
+                    "endCol": 21,
+                    "msg": "Loop condition is true. Entering loop body",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 195,
+                    "startCol": 17,
+                    "endLine": 195,
+                    "endCol": 17,
+                    "msg": "Taking true branch",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 196,
+                    "startCol": 17,
+                    "endLine": 196,
+                    "endCol": 17,
+                    "msg": "",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 207,
+                    "startCol": 1,
+                    "endLine": 207,
+                    "endCol": 1,
+                    "msg": "return from a call to internal_find",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 211,
+                    "startCol": 5,
+                    "endLine": 211,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 212,
+                    "startCol": 1,
+                    "endLine": 212,
+                    "endCol": 1,
+                    "msg": "return from a call to OPENSSL_sk_find",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 1,
+                    "endLine": 58,
+                    "endCol": 1,
+                    "msg": "return from a call to sk_X509_OBJECT_find",
+                    "fileId": 5357,
+                    "filePath": "include/openssl/x509_vfy.h"
+                },
+                {
+                    "startLine": 480,
+                    "startCol": 9,
+                    "endLine": 480,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 480,
+                    "startCol": 21,
+                    "endLine": 480,
+                    "endCol": 21,
+                    "msg": "Taking true branch",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 483,
+                    "startCol": 9,
+                    "endLine": 483,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 484,
+                    "startCol": 9,
+                    "endLine": 484,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 485,
+                    "startCol": 14,
+                    "endLine": 485,
+                    "endCol": 14,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 485,
+                    "startCol": 30,
+                    "endLine": 485,
+                    "endCol": 30,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 1,
+                    "endLine": 58,
+                    "endCol": 1,
+                    "msg": "start of procedure sk_X509_OBJECT_num()",
+                    "fileId": 5357,
+                    "filePath": "include/openssl/x509_vfy.h"
+                },
+                {
+                    "startLine": 277,
+                    "startCol": 1,
+                    "endLine": 277,
+                    "endCol": 1,
+                    "msg": "start of procedure OPENSSL_sk_num()",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 279,
+                    "startCol": 9,
+                    "endLine": 279,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 281,
+                    "startCol": 5,
+                    "endLine": 281,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 282,
+                    "startCol": 1,
+                    "endLine": 282,
+                    "endCol": 1,
+                    "msg": "return from a call to OPENSSL_sk_num",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 1,
+                    "endLine": 58,
+                    "endCol": 1,
+                    "msg": "return from a call to sk_X509_OBJECT_num",
+                    "fileId": 5357,
+                    "filePath": "include/openssl/x509_vfy.h"
+                },
+                {
+                    "startLine": 485,
+                    "startCol": 30,
+                    "endLine": 485,
+                    "endCol": 30,
+                    "msg": "Loop condition is true. Entering loop body",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 486,
+                    "startCol": 13,
+                    "endLine": 486,
+                    "endCol": 13,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 1,
+                    "endLine": 58,
+                    "endCol": 1,
+                    "msg": "start of procedure sk_X509_OBJECT_value()",
+                    "fileId": 5357,
+                    "filePath": "include/openssl/x509_vfy.h"
+                },
+                {
+                    "startLine": 284,
+                    "startCol": 1,
+                    "endLine": 284,
+                    "endCol": 1,
+                    "msg": "start of procedure OPENSSL_sk_value()",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 286,
+                    "startCol": 9,
+                    "endLine": 286,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 286,
+                    "startCol": 23,
+                    "endLine": 286,
+                    "endCol": 23,
+                    "msg": "Taking true branch",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 287,
+                    "startCol": 9,
+                    "endLine": 287,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 289,
+                    "startCol": 1,
+                    "endLine": 289,
+                    "endCol": 1,
+                    "msg": "return from a call to OPENSSL_sk_value",
+                    "fileId": 5358,
+                    "filePath": "crypto/stack/stack.c"
+                },
+                {
+                    "startLine": 58,
+                    "startCol": 1,
+                    "endLine": 58,
+                    "endCol": 1,
+                    "msg": "return from a call to sk_X509_OBJECT_value",
+                    "fileId": 5357,
+                    "filePath": "include/openssl/x509_vfy.h"
+                },
+                {
+                    "startLine": 487,
+                    "startCol": 17,
+                    "endLine": 487,
+                    "endCol": 17,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 137,
+                    "startCol": 1,
+                    "endLine": 137,
+                    "endCol": 1,
+                    "msg": "start of procedure x509_object_cmp()",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 142,
+                    "startCol": 5,
+                    "endLine": 142,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 487,
+                    "startCol": 17,
+                    "endLine": 487,
+                    "endCol": 17,
+                    "msg": "pointer `&tobj` last assigned on line 486 could be null and is dereferenced by call to `x509_object_cmp()` at line 487, column 17.",
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 456,
+                    "startCol": 1,
+                    "endLine": 456,
+                    "endCol": 1,
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                },
+                {
+                    "startLine": 464,
+                    "startCol": 5,
+                    "endLine": 464,
+                    "endCol": 5,
+                    "fileId": 5356,
+                    "filePath": "crypto/x509/x509_lu.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "NULL_DEREFERENCE",
+        "bugHash": "e45fd634514cbc077eef05112e324363",
+        "checkedFile": "apps/s_server.c",
+        "checkerMsg": "pointer `x` last assigned on line 495 could be null and is dereferenced by call to `X509_get1_ocsp()` at line 496, column 11.",
+        "reportId": 91652,
+        "fileId": 5374,
+        "line": 496,
+        "column": 11,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 30,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 474,
+                    "startCol": 1,
+                    "endLine": 474,
+                    "endCol": 1,
+                    "msg": "start of procedure cert_status_cb()",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 476,
+                    "startCol": 5,
+                    "endLine": 476,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 477,
+                    "startCol": 5,
+                    "endLine": 477,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 479,
+                    "startCol": 5,
+                    "endLine": 479,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 481,
+                    "startCol": 5,
+                    "endLine": 481,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 482,
+                    "startCol": 5,
+                    "endLine": 482,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 483,
+                    "startCol": 5,
+                    "endLine": 483,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 485,
+                    "startCol": 5,
+                    "endLine": 485,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 486,
+                    "startCol": 5,
+                    "endLine": 486,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 487,
+                    "startCol": 5,
+                    "endLine": 487,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 489,
+                    "startCol": 5,
+                    "endLine": 489,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 492,
+                    "startCol": 9,
+                    "endLine": 492,
+                    "endCol": 9,
+                    "msg": "Taking true branch",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 493,
+                    "startCol": 9,
+                    "endLine": 493,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 242,
+                    "startCol": 1,
+                    "endLine": 242,
+                    "endCol": 1,
+                    "msg": "start of procedure BIO_puts()",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 247,
+                    "startCol": 10,
+                    "endLine": 247,
+                    "endCol": 10,
+                    "msg": "Taking false branch",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 247,
+                    "startCol": 25,
+                    "endLine": 247,
+                    "endCol": 25,
+                    "msg": "Taking false branch",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 247,
+                    "startCol": 48,
+                    "endLine": 247,
+                    "endCol": 48,
+                    "msg": "Taking false branch",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 252,
+                    "startCol": 5,
+                    "endLine": 252,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 254,
+                    "startCol": 10,
+                    "endLine": 254,
+                    "endCol": 10,
+                    "msg": "Taking false branch",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 257,
+                    "startCol": 10,
+                    "endLine": 257,
+                    "endCol": 10,
+                    "msg": "Taking true branch",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 258,
+                    "startCol": 9,
+                    "endLine": 258,
+                    "endCol": 9,
+                    "msg": "Skipping ERR_put_error(): empty list of specs",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 259,
+                    "startCol": 9,
+                    "endLine": 259,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 270,
+                    "startCol": 1,
+                    "endLine": 270,
+                    "endCol": 1,
+                    "msg": "return from a call to BIO_puts",
+                    "fileId": 5375,
+                    "filePath": "crypto/bio/bio_lib.c"
+                },
+                {
+                    "startLine": 495,
+                    "startCol": 5,
+                    "endLine": 495,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 3447,
+                    "startCol": 1,
+                    "endLine": 3447,
+                    "endCol": 1,
+                    "msg": "start of procedure SSL_get_certificate()",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 3449,
+                    "startCol": 9,
+                    "endLine": 3449,
+                    "endCol": 9,
+                    "msg": "Taking false branch",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 3452,
+                    "startCol": 9,
+                    "endLine": 3452,
+                    "endCol": 9,
+                    "msg": "",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 3453,
+                    "startCol": 1,
+                    "endLine": 3453,
+                    "endCol": 1,
+                    "msg": "return from a call to SSL_get_certificate",
+                    "fileId": 5354,
+                    "filePath": "ssl/ssl_lib.c"
+                },
+                {
+                    "startLine": 496,
+                    "startCol": 5,
+                    "endLine": 496,
+                    "endCol": 5,
+                    "msg": "",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 496,
+                    "startCol": 11,
+                    "endLine": 496,
+                    "endCol": 11,
+                    "msg": "pointer `x` last assigned on line 495 could be null and is dereferenced by call to `X509_get1_ocsp()` at line 496, column 11.",
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                }
+            ],
+            "executionPath": [
+                {
+                    "startLine": 474,
+                    "startCol": 1,
+                    "endLine": 474,
+                    "endCol": 1,
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                },
+                {
+                    "startLine": 476,
+                    "startCol": 5,
+                    "endLine": 476,
+                    "endCol": 5,
+                    "fileId": 5374,
+                    "filePath": "apps/s_server.c"
+                }
+            ],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "c5758199a06cc74a6b02b03bc541d51b",
+        "checkedFile": "test/ssltestlib.c",
+        "checkerMsg": "The value written to &s_to_c_fbio (type bio_st*) is never used.",
+        "reportId": 91653,
+        "fileId": 5385,
+        "line": 654,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 654,
+                    "startCol": 5,
+                    "endLine": 654,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5385,
+                    "filePath": "test/ssltestlib.c"
+                },
+                {
+                    "startLine": 654,
+                    "startCol": 5,
+                    "endLine": 654,
+                    "endCol": 5,
+                    "msg": "The value written to &s_to_c_fbio (type bio_st*) is never used.",
+                    "fileId": 5385,
+                    "filePath": "test/ssltestlib.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "ce170cc7e95e225af92a508a478e386e",
+        "checkedFile": "test/ssltestlib.c",
+        "checkerMsg": "The value written to &s_to_c_bio (type bio_st*) is never used.",
+        "reportId": 91654,
+        "fileId": 5385,
+        "line": 653,
+        "column": 5,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 653,
+                    "startCol": 5,
+                    "endLine": 653,
+                    "endCol": 5,
+                    "msg": "Write of unused value",
+                    "fileId": 5385,
+                    "filePath": "test/ssltestlib.c"
+                },
+                {
+                    "startLine": 653,
+                    "startCol": 5,
+                    "endLine": 653,
+                    "endCol": 5,
+                    "msg": "The value written to &s_to_c_bio (type bio_st*) is never used.",
+                    "fileId": 5385,
+                    "filePath": "test/ssltestlib.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "2baaebf9f8534431cc94e360345e683e",
+        "checkedFile": "ssl/record/ssl3_record.c",
+        "checkerMsg": "The value written to &j (type unsigned int) is never used.",
+        "reportId": 91655,
+        "fileId": 5364,
+        "line": 917,
+        "column": 16,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 917,
+                    "startCol": 16,
+                    "endLine": 917,
+                    "endCol": 16,
+                    "msg": "Write of unused value",
+                    "fileId": 5364,
+                    "filePath": "ssl/record/ssl3_record.c"
+                },
+                {
+                    "startLine": 917,
+                    "startCol": 16,
+                    "endLine": 917,
+                    "endCol": 16,
+                    "msg": "The value written to &j (type unsigned int) is never used.",
+                    "fileId": 5364,
+                    "filePath": "ssl/record/ssl3_record.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "3786f1ffb3347622f6fd566fe484c021",
+        "checkedFile": "ssl/d1_srtp.c",
+        "checkerMsg": "The value written to &p (type unsigned char*) is never used.",
+        "reportId": 91656,
+        "fileId": 5384,
+        "line": 266,
+        "column": 10,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 266,
+                    "startCol": 10,
+                    "endLine": 266,
+                    "endCol": 10,
+                    "msg": "Write of unused value",
+                    "fileId": 5384,
+                    "filePath": "ssl/d1_srtp.c"
+                },
+                {
+                    "startLine": 266,
+                    "startCol": 10,
+                    "endLine": 266,
+                    "endCol": 10,
+                    "msg": "The value written to &p (type unsigned char*) is never used.",
+                    "fileId": 5384,
+                    "filePath": "ssl/d1_srtp.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    },
+    {
+        "runId": 29,
+        "checkerId": "DEAD_STORE",
+        "bugHash": "3786f1ffb3347622f6fd566fe484c021",
+        "checkedFile": "ssl/d1_srtp.c",
+        "checkerMsg": "The value written to &p (type unsigned char*) is never used.",
+        "reportId": 91657,
+        "fileId": 5384,
+        "line": 174,
+        "column": 10,
+        "severity": 0,
+        "reviewData": {
+            "status": 0,
+            "comment": null,
+            "author": null,
+            "date": null
+        },
+        "detectionStatus": 0,
+        "detectedAt": "2022-02-11 16:15:44.092307",
+        "fixedAt": null,
+        "bugPathLength": 2,
+        "details": {
+            "pathEvents": [
+                {
+                    "startLine": 174,
+                    "startCol": 10,
+                    "endLine": 174,
+                    "endCol": 10,
+                    "msg": "Write of unused value",
+                    "fileId": 5384,
+                    "filePath": "ssl/d1_srtp.c"
+                },
+                {
+                    "startLine": 174,
+                    "startCol": 10,
+                    "endLine": 174,
+                    "endCol": 10,
+                    "msg": "The value written to &p (type unsigned char*) is never used.",
+                    "fileId": 5384,
+                    "filePath": "ssl/d1_srtp.c"
+                }
+            ],
+            "executionPath": [],
+            "extendedData": [],
+            "comments": []
+        },
+        "analyzerName": "fbinfer"
+    }
+]
